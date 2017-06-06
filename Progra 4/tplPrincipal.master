@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="tplPrincipal.master.cs" Inherits="tplPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 45px;
+        }
+        .auto-style3 {
+            height: 104px;
+        }
+        .auto-style4 {
+            width: 220px;
+            height: 220px;
+        }
+        .auto-style5 {
+            width: 362px;
+            height: 203px;
+        }
+        .auto-style6 {
+            width: 500px;
+        }
+        .auto-style7 {
+            width: 500px;
+            height: 254px;
+        }
+        .auto-style8 {
+            height: 254px;
+        }
+    </style>
+</head>
+<body>
+    <table class="auto-style1">
+        <tr>
+            <td aria-atomic="True" class="auto-style3" style="background-color: #ED7B08; background-position: center bottom; font-size: x-large; text-align: center; font-family: 'Segoe Print';">
+                <img alt="" class="auto-style4" src="file:///C:/Users/Nicol/Downloads/LogoSample_ByTailorBrands.jpg" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style2">
+    <form id="form" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <table style="width:100%;">
+                <tr>
+                    <td class="auto-style7" style="background-color: #FEFF73">
+                        <img alt="" class="auto-style5" src="file:///C:/Users/Nicol/Desktop/Ulacit%204to%20cuatri/Progra%204/descarga%20(1).jpeg" /></td>
+                    <td class="auto-style8"></td>
+                    <td class="auto-style8"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <div>
+        Derechos reservados Salas-Lares corp</div>
+</body>
+</html>
