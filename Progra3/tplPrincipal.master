@@ -47,37 +47,15 @@
             <td class="auto-style2">
     <form id="form" runat="server">
     <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-            <table style="width:100%;">
-                <tr>
-                    <td class="auto-style7" style="background-color: #FEFF73">
-                        <img alt="" class="auto-style5" src="file:///C:/Users/Nicol/Desktop/Ulacit%204to%20cuatri/Progra%204/descarga%20(1).jpeg" /></td>
-                    <td class="auto-style8"></td>
-                    <td class="auto-style8"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
         </asp:ContentPlaceHolder>
     </div>
     </form>
             </td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
     </table>
-    <div>
-        Derechos reservados Salas-Lares corp</div>
+    <div style="text-align: center">    
+        <div  style="display: inline-block;"><asp:Label  ID="Footer" runat="server" Text="Derechos reservados Salas-Lares corp" Font-Names="Kristen ITC" text-align="center" Font-Size="Medium"></asp:Label></div>
+    </div>
 </body>
 </html>

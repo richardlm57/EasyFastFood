@@ -46,7 +46,7 @@
             <tr>
 
                 <td class="auto-style14" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-attachment: scroll; background-color: #ED7B08;">
-                    <asp:Label  ID="lblOption" runat="server" Text="Opcion  #1" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
+                    <asp:Label  ID="lblOption1" runat="server" Text="Opcion  #1" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     <br />
                     <br />
                     <asp:Image runat="server" Height="138px" ImageAlign="Top" ImageUrl="~/Images/hamburguesa-francesa-preparaci-n-9641.jpg" Width="221px" />
@@ -58,7 +58,7 @@
                 <td class="auto-style16" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-color: #ED7B08;" title="test">
                     <br />
                     <br />
-                    <asp:Label  ID="lblOption0" runat="server" Text="Opcion  #2" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
+                    <asp:Label  ID="lblOption2" runat="server" Text="Opcion  #2" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     <br />
                     <br />
                     <asp:Image ID="Image1" runat="server" Height="144px" ImageUrl="~/Images/papas-fritas.jpg" Width="221px" />
@@ -69,14 +69,14 @@
             <tr>
                 <td class="auto-style15" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-attachment: inherit;">&nbsp;&nbsp;
                     <br />
-                    <asp:Label  ID="lblOption1" runat="server" Text="Opcion  #3" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
+                    <asp:Label  ID="lblOption3" runat="server" Text="Opcion  #3" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     <br />
                     <br />
                     <asp:Image ID="Image2" runat="server" Height="155px" ImageUrl="~/Images/Make-It-Your-Way-Hot_636151539128369821.jpg" Width="169px" />
                     <br />
 &nbsp; </td>
                 <td class="auto-style17" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
-                    <asp:Label  ID="lblOption2" runat="server" Text="Opcion  #4" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
+                    <asp:Label  ID="lblOption4" runat="server" Text="Opcion  #4" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     <br />
                     <br />
                     <asp:Image ID="Image3" runat="server" Height="140px" ImageUrl="~/Images/yavoy_corcelnegro_combohamb.jpg" Width="202px" />
