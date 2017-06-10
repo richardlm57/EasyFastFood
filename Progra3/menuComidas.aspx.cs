@@ -16,4 +16,9 @@ public partial class menuComidas : System.Web.UI.Page
     {
 
     }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("Order.aspx", true);
+    }
 }
