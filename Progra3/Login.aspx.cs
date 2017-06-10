@@ -14,9 +14,14 @@ public partial class Login : System.Web.UI.Page
 
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
     {
-        if (txtUserName.Text == "" && txtPassword.Text == "" )
+        Server.Transfer("NewAccount.aspx", true);
+    }
+
+    protected void ButtonLogin_Click(object sender, EventArgs e)
+    {
+        if (txtUserName.Text == "" && txtPassword.Text == "")
         {
             lblerror.Text = "Ingreso usuario y contrasena incorrecto";
             txtUserName.BorderColor = System.Drawing.Color.Red;
@@ -48,10 +53,5 @@ public partial class Login : System.Web.UI.Page
             txtPassword.Text = "";
             lblerror.Text = "Error al consultar la base de datos";
         }
-    }
-
-    protected void LinkButton1_Click(object sender, EventArgs e)
-    {
-        Server.Transfer("NewAccount.aspx", true);
     }
 }

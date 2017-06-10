@@ -11,4 +11,9 @@ public partial class NewAccount : System.Web.UI.Page
     {
 
     }
+
+    protected void ButtonCrearUsuario_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("menuComidas.aspx", true);
+    }
 }

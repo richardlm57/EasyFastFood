@@ -31,12 +31,19 @@
                 </td>
             </tr>
         </table>
-        <div style="margin:auto">
-            <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+        <table align="center" class="auto-style1" style="width: 50%">
+                <tr>
+                    <td style="color:#ffffff" align="center">
+                        <asp:Button ID="ButtonLogin" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Login" ForeColor="White" OnClick="ButtonLogin_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color:#ffffff">
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" ForeColor="White">Nueva cuenta</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
             
-            <br />
-            <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Nueva cuenta</asp:LinkButton>
             <br />
             
             <asp:Label ID="lblerror" runat="server"></asp:Label>
