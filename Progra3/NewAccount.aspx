@@ -12,9 +12,7 @@
             </table>
             <br />
             <br />
-        <div >
-        <div style="margin:auto" >
-        <table class="auto-style10">
+        <table align="center" class="auto-style10">
             <tr>
                 <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelName" runat="server" Text="Nombre" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
@@ -51,15 +49,8 @@
                     <asp:TextBox ID="confirmPassword" runat="server"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelPassword" runat="server" Text="Contraseña" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
-                <td>
-                    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-                </td>
-            </tr>
         </table>
-            </div>
-            </div>
+            <br />
             <table  align="center" class="auto-style1" style="width: 23%">
                 <tr>
                     <td style="color:#ffffff" align="center">

@@ -46,8 +46,7 @@
             
             <br />
             
-            <asp:Label ID="lblerror" runat="server"></asp:Label>
-        </div>
+            <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
         </div>
         </div>
 </asp:Content>

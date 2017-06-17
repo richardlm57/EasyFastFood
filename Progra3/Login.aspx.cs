@@ -4,54 +4,43 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using App_Code;
 
 public partial class Login : System.Web.UI.Page
 {
-    String userName = "admin";
-    String password = "admin";
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
+    protected void LinkButton1_Click(object sender, EventArgs e)
     {
-        Server.Transfer("NewAccount.aspx", true);
+        Response.Redirect("NewAccount.aspx");
     }
 
     protected void ButtonLogin_Click(object sender, EventArgs e)
     {
-        if (txtUserName.Text == "" && txtPassword.Text == "")
+        var arrayUser = UsersControl.arrayUser;
+
+        txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
+        txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
+
+        foreach (User u in arrayUser) {
+            if (u.username== txtUserName.Text && u.password== txtPassword.Text)
+            {
+                Response.Redirect("menuComidas.aspx");
+            }
+        }
+
+        if (txtUserName.Text == "")
         {
-            lblerror.Text = "Ingreso usuario y contrasena incorrecto";
+            lblerror.Text = "\nUsuario incorrecto";
             txtUserName.BorderColor = System.Drawing.Color.Red;
+        }
+        if (txtPassword.Text == "")
+        {
+            lblerror.Text += "\nContraseña incorrecta";
             txtPassword.BorderColor = System.Drawing.Color.Red;
-        }
-        else if (txtPassword.Text == "")
-        {
-            lblerror.Text = "Ingreso contrasena incorrecta";
-            txtPassword.BorderColor = System.Drawing.Color.Red;
-            txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
-        }
-        else if (txtUserName.Text == "")
-        {
-            lblerror.Text = "Ingreso usuario incorrecto";
-            txtUserName.BorderColor = System.Drawing.Color.Red;
-            txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
-        }
-        else if (txtUserName.Text == userName && txtPassword.Text == password)
-        {
-            lblerror.Text = "usuario correcto";
-            txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
-            txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
-        }
-        else
-        {
-            txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
-            txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
-            txtUserName.Text = "";
-            txtPassword.Text = "";
-            lblerror.Text = "Error al consultar la base de datos";
         }
     }
 }
