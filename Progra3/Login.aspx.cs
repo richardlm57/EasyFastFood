@@ -24,6 +24,8 @@ public partial class Login : System.Web.UI.Page
 
         txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
         txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
+        lblErrorLogin.Text = "";
+        Boolean login = false;
 
         foreach (User u in arrayUser) {
             if (u.username== txtUserName.Text && u.password== txtPassword.Text)
@@ -34,12 +36,17 @@ public partial class Login : System.Web.UI.Page
 
         if (txtUserName.Text == "")
         {
-            lblerror.Text = "\nUsuario incorrecto";
+            lblErrorLogin.Text += "\nUsuario inválido";
             txtUserName.BorderColor = System.Drawing.Color.Red;
         }
         if (txtPassword.Text == "")
         {
-            lblerror.Text += "\nContraseña incorrecta";
+            lblErrorLogin.Text += "\nContraseña inválida";
+            txtPassword.BorderColor = System.Drawing.Color.Red;
+        }
+        else {
+            lblErrorLogin.Text += "\nEl usuario o la contraseña son incorrectos";
+            txtUserName.BorderColor = System.Drawing.Color.Red;
             txtPassword.BorderColor = System.Drawing.Color.Red;
         }
     }

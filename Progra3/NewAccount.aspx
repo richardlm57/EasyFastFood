@@ -50,8 +50,14 @@
                 </td>
             </tr>
         </table>
+            
             <br />
             <table  align="center" class="auto-style1" style="width: 23%">
+                <tr>
+                    <td>
+                        <asp:Label ID="lblErrorNewAccount" runat="server" Text="" Font-Names="Kristen ITC" Font-Size="Small" BackColor="#af3a11" ForeColor="White"></asp:Label>
+                    </td>
+                </tr>
                 <tr>
                     <td style="color:#ffffff" align="center">
                         <asp:Button ID="ButtonCrearUsuario" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Crear usuario" ForeColor="White" OnClick="ButtonCrearUsuario_Click" />

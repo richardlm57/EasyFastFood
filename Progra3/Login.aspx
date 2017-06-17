@@ -44,7 +44,7 @@
                 </tr>
             </table>           
             <br />            
-            <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblErrorLogin" runat="server" Text="" Font-Names="Kristen ITC" Font-Size="Small" BackColor="#af3a11" ForeColor="White"></asp:Label>
         </div>
         </div>
 </asp:Content>
