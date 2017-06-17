@@ -42,10 +42,8 @@
                         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" ForeColor="White">Nueva cuenta</asp:LinkButton>
                     </td>
                 </tr>
-            </table>
-            
-            <br />
-            
+            </table>           
+            <br />            
             <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
         </div>
         </div>
