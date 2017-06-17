@@ -21,7 +21,7 @@
             <table bgcolor="af3a11" align="center" class="auto-style1" style="width: 23%">
                 <tr>
                     <td style="color:#ffffff" align="center">
-                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" />
+                        <asp:Button ID="ButtonEnded" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" OnClick="ButtonEnded_Click" />
                     </td>
                 </tr>
             </table>
