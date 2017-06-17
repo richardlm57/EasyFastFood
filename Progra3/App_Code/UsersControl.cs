@@ -9,6 +9,6 @@ namespace App_Code
     public static class UsersControl
     {
         public static ArrayList arrayUser;
-        public static User actualUser;
+        
     }
 }
