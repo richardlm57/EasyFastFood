@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,14 +12,19 @@ public partial class menuComidas : System.Web.UI.Page
     {
 
     }
-
-    protected void TextBox1_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
+   
     protected void Button4_Click(object sender, EventArgs e)
     {
-        Server.Transfer("Order.aspx", true);
+        
+        var arrayProducts = productList.productArray;
+        foreach (Products product in arrayProducts)
+        {
+            if (product.ID == 0)
+            {
+                
+            }
+            Server.Transfer("Order.aspx", true);
+
+        }
     }
 }
