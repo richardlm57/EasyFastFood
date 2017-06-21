@@ -16,6 +16,7 @@ public partial class NewAccount : System.Web.UI.Page
     protected void ButtonCrearUsuario_Click(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
+
         lblErrorNewAccount.Text = "";
         if (newName.Text == "")
         {
@@ -68,5 +69,10 @@ public partial class NewAccount : System.Web.UI.Page
                 Response.Redirect("Login.aspx");
             }
         }
+    }
+
+    protected void ButtonAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Login.aspx");
     }
 }

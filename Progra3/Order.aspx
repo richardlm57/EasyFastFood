@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tplPrincipal.master" AutoEventWireup="true" CodeFile="Order.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style9 {
+            width: 125px;
+        }
+        .auto-style10 {
+            width: 23%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div width="100%" style="background-color: #ED7B08;">
@@ -18,9 +26,12 @@
             </table>
             <br />
             <br />
-            <table bgcolor="af3a11" align="center" class="auto-style1" style="width: 23%">
+            <table bgcolor="af3a11" align="center" class="auto-style10" style="width: 23%; background-color: #ED7B08;">
                 <tr>
-                    <td style="color:#ffffff" align="center">
+                    <td style="color:#ffffff; background-color: #ED7B08;" align="center" class="auto-style9">
+                        <asp:Button ID="atrasBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="ButtonAtras_Click" Width="122px" />
+                    </td>
+                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
                         <asp:Button ID="ButtonEnded" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" OnClick="ButtonEnded_Click" />
                     </td>
                 </tr>

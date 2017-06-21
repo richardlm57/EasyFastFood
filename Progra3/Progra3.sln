@@ -7,20 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Progra3(1)", ".", "{2BBB496
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_63538"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\EasyFastFood\Progra3\"
+		Debug.AspNetCompiler.PhysicalPath = "..\Progra3\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63538\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_63538"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\EasyFastFood\Progra3\"
+		Release.AspNetCompiler.PhysicalPath = "..\Progra3\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63538\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "63538"
+		SlnRelativePath = "..\Progra3\"
 	EndProjectSection
 EndProject
 Global

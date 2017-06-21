@@ -9,17 +9,17 @@ public class Order
 {
     public int tiempoEstimado;
     public int total;
-    public String tipoDePago;
-    public String Status;
-    public int ID;
+    public String tipoPago;
+    public String status;
+    public int id;
 
-    public Order(int tiempoEstimado, int total, String tipoDePago, String Status, int ID)
+    public Order(int tiempoEstimado, int total, String tipoDePago, String status, int id)
     {
         this.tiempoEstimado = tiempoEstimado;
         this.total = total;
-        this.tipoDePago = tipoDePago;
-        this.Status = Status;
-        this.ID = ID;
+        this.tipoPago = tipoDePago;
+        this.status = status;
+        this.id = id;
     }
     public static ArrayList UserOrder;
 }

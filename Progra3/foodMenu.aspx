@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tplPrincipal.master" AutoEventWireup="true" CodeFile="foodMenu.aspx.cs" Inherits="menuComidas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tplPrincipal.master" AutoEventWireup="true" CodeFile="foodMenu.aspx.cs" Inherits="foodMenu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -35,6 +35,9 @@
         .auto-style20 {
             width: 54px;
         }
+        .auto-style21 {
+            height: 32px;
+        }
         </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -48,18 +51,18 @@
             
             <tr>
 
-                <td class="auto-style14" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-attachment: scroll; background-color: #ED7B08;">
+                <td  ID="tdOpc1" class="auto-style14" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-attachment: scroll; background-color: #ED7B08;" id="tdOpc1">
                     <asp:Label  ID="lblOption1" runat="server" Text="Opcion  #1" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
-                    <div ID="descOpc1" style="position:relative; left:300px;width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
-                        Hamburguesa Titan de pescado.<br />
-                        Lechuga, Tomate, Salsa de tomate, torta de pescado, todo esto acompañado de pan italiano.</div>
+                    <div  style="position:relative; left:300px;width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
+                        <asp:Label ID="lblOpc1" runat="server" Text=""></asp:Label>
+                        </div>
                     <asp:Image ID="imgOpc1" runat="server" Height="138px" ImageAlign="Top" ImageUrl="~/Images/hamburguesa-francesa-preparaci-n-9641.jpg" Width="221px" />
                     
                     <div style="position:relative; left:300px;width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
                         
                         <table class="auto-style1">
                             <tr>
-                                <td>Tiempo estimado : 5 min</td>
+                                <td class="auto-style21">Tiempo estimado : 5 min</td>
                             </tr>
                             <tr>
                                 <td>Precio 2500</td>
@@ -77,8 +80,7 @@
                     <asp:Label  ID="lblOption2" runat="server" Text="Opcion  #2" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
 
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
-                        Papas a la francesa clasicas.<br />
-                        Acompañadas de salsa de tomate y una salsa especial hecha en casa</div>
+                        <asp:Label ID="lblOpc2" runat="server" Text=""></asp:Label></div>
                     <asp:Image ID="Image1" runat="server" Height="144px" ImageUrl="~/Images/papas-fritas.jpg" Width="221px" />
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">

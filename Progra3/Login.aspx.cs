@@ -50,4 +50,9 @@ public partial class Login : System.Web.UI.Page
             txtPassword.BorderColor = System.Drawing.Color.Red;
         }
     }
+
+    protected void ButtonAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("foodMenu.aspx");
+    }
 }
