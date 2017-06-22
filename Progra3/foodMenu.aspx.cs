@@ -11,7 +11,8 @@ public partial class foodMenu : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         var arrayProducts = productList.products;
-
+        productList p = new productList();
+        p.getList();
         foreach (Products product in arrayProducts)
         {
             if (product.id == 1)
@@ -19,12 +20,23 @@ public partial class foodMenu : System.Web.UI.Page
 
                 lblOpc1.Text = product.descripcion;
             }
-            /*if (product.id == 4)
+
+
+            else if (product.id == 2)
             {
 
                 lblOpc2.Text = product.descripcion;
             }
-            */
+            else if (product.id == 3)
+            {
+
+                lblOpc3.Text = product.descripcion;
+            }
+            else 
+            {
+
+                lblOpc4.Text = product.descripcion;
+            }
         }
 
     }
