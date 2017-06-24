@@ -8,10 +8,13 @@ using App_Code;
 
 public partial class Login : System.Web.UI.Page
 {
-    public Boolean login = false;
+    
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Application["login"]==null)
+        {
+            Application["login"] = false;
+        }
     }
 
     protected void LinkButton1_Click(object sender, EventArgs e)
@@ -32,8 +35,9 @@ public partial class Login : System.Web.UI.Page
             foreach (User u in arrayUser) {
                 if (u.username == txtUserName.Text && u.password == txtPassword.Text)
                 {
-                    login = true;
-                    Response.Redirect("menuComidas.aspx");
+                
+                Application["login"] = true;
+                Response.Redirect("foodMenu.aspx");
                 
                 }
             }

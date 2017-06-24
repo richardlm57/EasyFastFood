@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,10 +12,18 @@ public partial class foodMenu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var arrayProducts = productList.products;
-        productList p = new productList();
-        p.getList();
-        foreach (Products product in arrayProducts)
+        if (Application["login"] == null)
+        {
+            Application["login"] = false;
+        }
+        Label1.Text = "Alguna otra";
+        if (ProductList.products == null)
+        {
+            Label1.Text = "Primera vez";
+        }
+        ProductList p = new ProductList();
+        p.createProductList();
+        foreach (Product product in ProductList.products)
         {
             if (product.id == 1)
             {
@@ -23,7 +32,7 @@ public partial class foodMenu : System.Web.UI.Page
                 lbltTiemOpc1.Text = "Tiempo estimado";
                 lblTiemTotOpc1.Text = product.tiempoRealizacion.ToString() + "" + "min";
                 lblPriceOpc1.Text = "Precio total";
-                lblPriceTot1.Text = product.precio.ToString() + "" + "Colones";
+                lblPriceTot1.Text = product.precio.ToString() + " Colones";
             }
 
 
@@ -34,7 +43,7 @@ public partial class foodMenu : System.Web.UI.Page
                 lblTiemOcp2.Text = "Tiempo estimado";
                 lblTiemTot2.Text = product.tiempoRealizacion.ToString() + "" + "min";
                 lblPriceOpc2.Text = "Precio total";
-                lblPriceTot2.Text = product.precio.ToString() + "" + "Colones";
+                lblPriceTot2.Text = product.precio.ToString() + " Colones";
             }
             else if (product.id == 3)
             {
@@ -43,7 +52,7 @@ public partial class foodMenu : System.Web.UI.Page
                 lblTiemOpc3.Text = "Tiempo estimado";
                 lblTiemTot3.Text = product.tiempoRealizacion.ToString() + "" + "min";
                 lblPriceOpc3.Text = "Precio total";
-                lblPriceTot3.Text = product.precio.ToString() + "" + "Colones";
+                lblPriceTot3.Text = product.precio.ToString() + " Colones";
             }
             else
             {
@@ -52,7 +61,7 @@ public partial class foodMenu : System.Web.UI.Page
                 lblTiemOpc4.Text = "Tiempo estimado";
                 lblTiemTot4.Text = product.tiempoRealizacion.ToString() + "" + "min";
                 lblPriceOpc4.Text = "Precio total";
-                lblPriceTot4.Text = product.precio.ToString() + "" + "Colones";
+                lblPriceTot4.Text = product.precio.ToString() + " Colones";
             }
         }
 
@@ -60,7 +69,33 @@ public partial class foodMenu : System.Web.UI.Page
 
     protected void Button4_Click(object sender, EventArgs e)
     {
-        
-        Response.Redirect("Order.aspx");
+        var status = Application["login"];
+        Boolean validation = Convert.ToBoolean(status);
+        if ( validation == true)
+        {
+            Response.Redirect("Order.aspx");
+        }else
+        {
+            Response.Redirect("Login.aspx");
+        }
+       
+    }
+
+    protected void addBtnOpc1_Click(object sender, EventArgs e)
+    {
+        int qty = Convert.ToInt32(QtyOption1.Value);
+        if (qty >= 0) {
+            Product tmp = (Product)ProductList.products[0];
+            if (tmp.cantidad - qty >= 0)
+            {
+                tmp.cantidad -= qty;
+                Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
+                ProductList.products[0] = tmp;
+                LabelAddOpc1.Text = "Anadido";
+            }
+            else {
+                LabelAddOpc1.Text = "No hay productos disponibles";
+            }
+        }
     }
 }

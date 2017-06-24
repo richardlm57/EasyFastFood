@@ -57,6 +57,8 @@
                         </div>
                     <asp:Image ID="imgOpc1" runat="server" Height="138px" ImageAlign="Top" ImageUrl="~/Images/hamburguesa-francesa-preparaci-n-9641.jpg" Width="221px" />
                     
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    
                     <div style="position:relative; left:300px;width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
                         
                         <table class="auto-style1">
@@ -70,19 +72,14 @@
                             </tr>
                         </table>
                         
-<<<<<<< HEAD
-                    <div style="position:relative;left:300px">
-                    <input ID="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>
-=======
+
                         <div style="position:relative;left:300px">
-                        <input id="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <input id="QtyOption1" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                            <asp:Label ID="LabelAddOpc1" runat="server" Text="Label"></asp:Label>
                         <br />
-                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc1_Click" />
                     </div>
->>>>>>> origin/master
+
                 </td>
                 <td class="auto-style16" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-color: #ED7B08;" title="test">
                     
