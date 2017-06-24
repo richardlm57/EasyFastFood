@@ -8,6 +8,7 @@ using App_Code;
 
 public partial class Login : System.Web.UI.Page
 {
+    public Boolean login = false;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -25,32 +26,35 @@ public partial class Login : System.Web.UI.Page
         txtUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
         txtPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
         lblErrorLogin.Text = "";
-        Boolean login = false;
+       
 
-        foreach (User u in arrayUser) {
-            if (u.username== txtUserName.Text && u.password== txtPassword.Text)
+      
+            foreach (User u in arrayUser) {
+                if (u.username == txtUserName.Text && u.password == txtPassword.Text)
+                {
+                    login = true;
+                    Response.Redirect("menuComidas.aspx");
+                
+                }
+            }
+
+            if (txtUserName.Text == "")
             {
-                Response.Redirect("menuComidas.aspx");
+                lblErrorLogin.Text += "\nUsuario inválido";
+                txtUserName.BorderColor = System.Drawing.Color.Red;
+            }
+            if (txtPassword.Text == "")
+            {
+                lblErrorLogin.Text += "\nContraseña inválida";
+                txtPassword.BorderColor = System.Drawing.Color.Red;
+            }
+            else {
+                lblErrorLogin.Text += "\nEl usuario o la contraseña son incorrectos";
+                txtUserName.BorderColor = System.Drawing.Color.Red;
+                txtPassword.BorderColor = System.Drawing.Color.Red;
             }
         }
-
-        if (txtUserName.Text == "")
-        {
-            lblErrorLogin.Text += "\nUsuario inválido";
-            txtUserName.BorderColor = System.Drawing.Color.Red;
-        }
-        if (txtPassword.Text == "")
-        {
-            lblErrorLogin.Text += "\nContraseña inválida";
-            txtPassword.BorderColor = System.Drawing.Color.Red;
-        }
-        else {
-            lblErrorLogin.Text += "\nEl usuario o la contraseña son incorrectos";
-            txtUserName.BorderColor = System.Drawing.Color.Red;
-            txtPassword.BorderColor = System.Drawing.Color.Red;
-        }
-    }
-
+    
     protected void ButtonAtras_Click(object sender, EventArgs e)
     {
         Response.Redirect("foodMenu.aspx");

@@ -62,15 +62,17 @@
                         
                         <table class="auto-style1">
                             <tr>
-                                <td class="auto-style21">Tiempo estimado : 5 min</td>
+                                <td class="auto-style21"> <asp:Label ID="lbltTiemOpc1" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemTotOpc1" runat="server" Text=""></asp:Label></td>
                             </tr>
                             <tr>
-                                <td>Precio 2500</td>
+                                <td   class="auto-style21"> <asp:Label ID="lblPriceOpc1" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblPriceTot1" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table>
                         
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                    <input ID="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                     <br />
                     <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
                         </div>
@@ -84,12 +86,14 @@
                     <asp:Image ID="Image1" runat="server" Height="144px" ImageUrl="~/Images/papas-fritas.jpg" Width="221px" />
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
-                        <table class="auto-style1">
+                       <table class="auto-style1">
                             <tr>
-                                <td>Tiempo estimado : 2 min</td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemOcp2" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemTot2" runat="server" Text=""></asp:Label></td>
                             </tr>
                             <tr>
-                                <td>Precio 1500</td>
+                                <td   class="auto-style21"> <asp:Label ID="lblPriceOpc2" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblPriceTot2" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
@@ -111,12 +115,14 @@
                     
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
-                        <table class="auto-style1">
+                       <table class="auto-style1">
                             <tr>
-                                <td>Tiempo estimado : 2 min</td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemOpc3" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemTot3" runat="server" Text=""></asp:Label></td>
                             </tr>
                             <tr>
-                                <td>Precio 3500</td>
+                                <td   class="auto-style21"> <asp:Label ID="lblPriceOpc3" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblPriceTot3" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
@@ -138,10 +144,12 @@
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
                       <table class="auto-style1">
                             <tr>
-                                <td>Tiempo estimado : 8 min</td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemOpc4" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblTiemTot4" runat="server" Text=""></asp:Label></td>
                             </tr>
                             <tr>
-                                <td>Precio 4500</td>
+                                <td   class="auto-style21"> <asp:Label ID="lblPriceOpc4" runat="server" Text=""></asp:Label></td>
+                                <td class="auto-style21"> <asp:Label ID="lblPriceTot4" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
