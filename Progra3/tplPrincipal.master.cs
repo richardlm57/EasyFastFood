@@ -11,7 +11,7 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        productList.productArray = new ArrayList();
-        productList.productArray.Add(new Products(0, 0, "", 0, 0));
+        productList.products = new ArrayList();
+        productList.products.Add(new Products(0, 0, "", 0, 0));
     }
 }

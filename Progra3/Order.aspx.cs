@@ -27,4 +27,9 @@ public partial class _Default : System.Web.UI.Page
         client.Send("salasbar97@gmail.com", "richardlm57@gmail.com", "Tomela", "Ya funciona pa");
         Console.WriteLine("Sent");
     }
+
+    protected void ButtonAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("foodMenu.aspx");
+    }
 }
