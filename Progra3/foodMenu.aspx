@@ -46,7 +46,6 @@
             <td style="font-family: 'kristen ITC'; background-color: #af3a11; color: #FFFFFF; text-align: center; font-size: x-large;">Menu comidas</td>
         </tr>
     </table>
-
         <table ;class="auto-style9" class="auto-style19">
             
             <tr>
@@ -71,17 +70,26 @@
                             </tr>
                         </table>
                         
+<<<<<<< HEAD
                     <div style="position:relative;left:300px">
                     <input ID="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                     <br />
                     <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
                         </div>
+=======
+                        <div style="position:relative;left:300px">
+                        <input id="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>
+>>>>>>> origin/master
                 </td>
                 <td class="auto-style16" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-color: #ED7B08;" title="test">
                     
                     <asp:Label  ID="lblOption2" runat="server" Text="Opcion  #2" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
 
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
+
                         <asp:Label ID="lblOpc2" runat="server" Text=""></asp:Label></div>
                     <asp:Image ID="Image1" runat="server" Height="144px" ImageUrl="~/Images/papas-fritas.jpg" Width="221px" />
                     
@@ -95,19 +103,20 @@
                                 <td   class="auto-style21"> <asp:Label ID="lblPriceOpc2" runat="server" Text=""></asp:Label></td>
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot2" runat="server" Text=""></asp:Label></td>
                             </tr>
-                        </table></div>
+                        </table>
+                    </div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption2" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>
+                        <input id="QtyOption2" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style15" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-attachment: inherit;">&nbsp;&nbsp;
                     <br />
                     <asp:Label  ID="lblOption3" runat="server" Text="Opcion  #3" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
-                    
+
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
                         <asp:Label ID="lblOpc3" runat="server" Text=""></asp:Label></div>
@@ -126,16 +135,16 @@
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption3" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <input id="QtyOption3" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button2" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>                    
                     <br />
-                    <asp:Button ID="Button2" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>                    
-                    <br />
-
                 </td>
                 <td class="auto-style17" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
                     <asp:Label  ID="lblOption4" runat="server" Text="Opcion  #4" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     
+
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
                         <asp:Label ID="lblOpc4" runat="server" Text=""></asp:Label></div>
@@ -151,16 +160,18 @@
                                 <td   class="auto-style21"> <asp:Label ID="lblPriceOpc4" runat="server" Text=""></asp:Label></td>
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot4" runat="server" Text=""></asp:Label></td>
                             </tr>
-                        </table></div>
+                        </table>
+                    </div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption4" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="Button3" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>                    </td>
+                        <input id="QtyOption4" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button3" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>                    
+                </td>
             </tr>
     </table>
     <div style="position:relative; text-align:center">
-    <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
+        <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
     </div>
     </asp:Content>
 
