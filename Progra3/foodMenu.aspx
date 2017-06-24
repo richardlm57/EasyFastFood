@@ -43,7 +43,7 @@
             <td style="font-family: 'kristen ITC'; background-color: #af3a11; color: #FFFFFF; text-align: center; font-size: x-large;">Menu comidas</td>
         </tr>
     </table>
-
+    <asp:Repeater ID="Repeater1" runat="server"></asp:Repeater>
         <table ;class="auto-style9" class="auto-style19">
             
             <tr>
@@ -66,11 +66,11 @@
                             </tr>
                         </table>
                         
-                    <div style="position:relative;left:300px">
-                    <input id="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>
+                        <div style="position:relative;left:300px">
+                        <input id="QtyOption1" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>
                 </td>
                 <td class="auto-style16" style="background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y; background-color: #ED7B08;" title="test">
                     
@@ -78,7 +78,8 @@
 
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
                         Papas a la francesa clasicas.<br />
-                        Acompañadas de salsa de tomate y una salsa especial hecha en casa</div>
+                        Acompañadas de salsa de tomate y una salsa especial hecha en casa
+                    </div>
                     <asp:Image ID="Image1" runat="server" Height="144px" ImageUrl="~/Images/papas-fritas.jpg" Width="221px" />
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
@@ -89,12 +90,13 @@
                             <tr>
                                 <td>Precio 1500</td>
                             </tr>
-                        </table></div>
+                        </table>
+                    </div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption2" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>
+                        <input id="QtyOption2" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -104,7 +106,8 @@
                     
                     <div ID="" style="position:relative; left:300px; width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
                         Hot dog salva tandas.<br />
-                        Salchicha de 30 cm , pan americano, papas y una gaseosa.</div>
+                        Salchicha de 30 cm , pan americano, papas y una gaseosa.
+                    </div>
                     <asp:Image ID="Image2" runat="server" Height="155px" ImageUrl="~/Images/Make-It-Your-Way-Hot_636151539128369821.jpg" Width="169px" />
                     
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
@@ -117,12 +120,11 @@
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption3" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <input id="QtyOption3" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button2" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>                    
                     <br />
-                    <asp:Button ID="Button2" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>                    
-                    <br />
-
                 </td>
                 <td class="auto-style17" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
                     <asp:Label  ID="lblOption4" runat="server" Text="Opcion  #4" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
@@ -130,7 +132,8 @@
                     <div style="position:relative; left:300px; width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
                         Combo muerto de hambre.<br />
                         Esta opcion incluye: papas, hamburguesa con torta de carne, lechuga, pepina y salsa BBQ.<br />
-                        Junto a una deliciosa gaseosa.</div>
+                        Junto a una deliciosa gaseosa.
+                    </div>
                     <asp:Image ID="Image3" runat="server" Height="140px" ImageUrl="~/Images/yavoy_corcelnegro_combohamb.jpg" Width="202px" />
                    
                     <div style="position:relative; left:300px; width:500px;font-family: 'kristen ITC'; background-color: #fefb64;">
@@ -141,16 +144,18 @@
                             <tr>
                                 <td>Precio 4500</td>
                             </tr>
-                        </table></div>
+                        </table>
+                    </div>
                     <div style="position:relative;left:300px">
-                    <input id="QtyOption4" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
-                    <br />
-                    <asp:Button ID="Button3" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                        </div>                    </td>
+                        <input id="QtyOption4" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <br />
+                        <asp:Button ID="Button3" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                    </div>                    
+                </td>
             </tr>
     </table>
     <div style="position:relative; text-align:center">
-    <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
+        <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
     </div>
     </asp:Content>
 

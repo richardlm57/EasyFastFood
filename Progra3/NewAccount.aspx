@@ -40,13 +40,13 @@
             <tr>
                 <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelNewPassword" runat="server" Text="Contraseña" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
-                    <asp:TextBox ID="newPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="newPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelConfirmPassword" runat="server" Text="Confirmar contraseña" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
-                    <asp:TextBox ID="confirmPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="confirmPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
         </table>
