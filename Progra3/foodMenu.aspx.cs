@@ -12,9 +12,9 @@ public partial class foodMenu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Application["login"] == null)
+        if (Session["login"] == null)
         {
-            Application["login"] = false;
+            Session["login"] = false;
         }
         Label1.Text = "Alguna otra";
         if (ProductList.products == null)
@@ -69,7 +69,7 @@ public partial class foodMenu : System.Web.UI.Page
 
     protected void Button4_Click(object sender, EventArgs e)
     {
-        var status = Application["login"];
+        var status = Session["login"];
         Boolean validation = Convert.ToBoolean(status);
         if ( validation == true)
         {

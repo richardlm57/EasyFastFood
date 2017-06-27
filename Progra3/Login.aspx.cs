@@ -11,9 +11,9 @@ public partial class Login : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Application["login"]==null)
+        if (Session["login"]==null)
         {
-            Application["login"] = false;
+            Session["login"] = false;
         }
     }
 
@@ -36,7 +36,7 @@ public partial class Login : System.Web.UI.Page
                 if (u.username == txtUserName.Text && u.password == txtPassword.Text)
                 {
                 
-                Application["login"] = true;
+                Session["login"] = true;
                 Response.Redirect("foodMenu.aspx");
                 
                 }
