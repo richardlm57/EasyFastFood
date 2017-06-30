@@ -20,7 +20,7 @@
         <div style="display:inline-block;background-color: #ED7B08;position:relative;width:25%;left:40%">
             <img style="position:relative;display:inline-block; top: 0px; left: 1px;" alt="" class="auto-style4" src="file:///C:/EasyFastFood/Progra3/Images/EasyFastFood.jpg" /><br />
         </div>
-        <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-100px; left:40%">
+        <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-80px; left:40%">
             <div id="logged" style="display:none" runat="server">
                 Loggeado PA
                 <table align="center" class="auto-style1" style="width: 50%">
