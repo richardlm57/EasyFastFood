@@ -8,53 +8,67 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 45px;
-        }
-        .auto-style3 {
-            height: 104px;
-        }
         .auto-style4 {
             width: 220px;
             height: 220px;
         }
-        .auto-style5 {
-            width: 362px;
-            height: 203px;
-        }
-        .auto-style6 {
-            width: 500px;
-        }
-        .auto-style7 {
-            width: 500px;
-            height: 254px;
-        }
-        .auto-style8 {
-            height: 254px;
-        }
-    </style>
+        </style>
 </head>
-<body>
-    <table class="auto-style1">
-        <tr>
-            <td aria-atomic="True" class="auto-style3" style="background-color: #ED7B08; background-position: center bottom; font-size: x-large; text-align: center; font-family: 'Segoe Print';">
-                <img alt="" class="auto-style4" src="file:///C:/EasyFastFood/Progra3/Images/EasyFastFood.jpg" /><br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">
+<body>    
     <form id="form" runat="server">
+    <div style="background-color: #ED7B08">
+        <div style="display:inline-block;background-color: #ED7B08;position:relative;width:25%;left:40%">
+            <img style="position:relative;display:inline-block; top: 0px; left: 1px;" alt="" class="auto-style4" src="file:///C:/EasyFastFood/Progra3/Images/EasyFastFood.jpg" /><br />
+        </div>
+        <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-100px; left:40%">
+            <div id="logged" style="display:none" runat="server">
+                Loggeado PA
+                <table align="center" class="auto-style1" style="width: 50%">
+                    <tr>
+                        <td style="color:#ffffff" align="center">
+                            <asp:Button ID="ButtonLogout" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Log Out" ForeColor="White" OnClick="ButtonMiniLogout_Click" />
+                        </td>
+                    </tr>
+                </table>     
+            </div>
+            <div id="notlogged" style="display:inline-block" runat="server">
+
+                <table class="auto-style10">
+                    <tr>
+                        <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelUsernameLogin" runat="server" Text="Nombre de usuario" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
+                        <td>
+                            <asp:TextBox ID="txtMiniUserName" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelPassword" runat="server" Text="Contraseña" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
+                        <td>
+                            <asp:TextBox ID="txtMiniPassword" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" class="auto-style1" style="width: 50%">
+                    <tr>
+                        <td style="color:#ffffff" align="center">
+                        </td>
+                    
+                        <td style="color:#ffffff" align="center">
+                            <asp:Button ID="ButtonMiniLogin" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Login" ForeColor="White" OnClick="ButtonMiniLogin_Click" />
+                        </td>
+                    </tr>
+                </table>           
+                <br />            
+                <asp:Label ID="lblErrorLogin" runat="server" Text="" Font-Names="Kristen ITC" Font-Size="Small" BackColor="#af3a11" ForeColor="White"></asp:Label>
+        
+            
+            </div>
+        </div>
+    </div>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
         </asp:ContentPlaceHolder>
     </div>
     </form>
-            </td>
-        </tr>
-    </table>
     <div style="text-align: center">    
         <div  style="display: inline-block;"><asp:Label  ID="Footer" runat="server" Text="Derechos reservados Salas-Lares corp" Font-Names="Kristen ITC" text-align="center" Font-Size="Medium"></asp:Label></div>
     </div>
