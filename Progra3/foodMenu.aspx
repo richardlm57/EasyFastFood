@@ -15,12 +15,7 @@
 
         .auto-style16 {
             height: 180px;
-            width: 412px;
-        }
-
-        .auto-style17 {
-            width: 412px;
-            height: 152px;
+            width: 259px;
         }
 
         .auto-style18 {
@@ -37,6 +32,15 @@
         }
         .auto-style21 {
             height: 32px;
+        }
+        .auto-style22 {
+        position: relative;
+        left: 2px;
+        top: 0px;
+    }
+        .auto-style23 {
+            width: 259px;
+            height: 152px;
         }
         </style>
     </asp:Content>
@@ -138,7 +142,7 @@
                     </div>                    
                     <br />
                 </td>
-                <td class="auto-style17" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
+                <td class="auto-style23" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
                     <asp:Label  ID="lblOption4" runat="server" Text="Opcion  #4" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="X-Large"></asp:Label>
                     
 
@@ -167,7 +171,7 @@
                 </td>
             </tr>
     </table>
-    <div style="position:relative; text-align:center">
+    <div style="text-align:center" class="auto-style22">
         <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
     </div>
     </asp:Content>

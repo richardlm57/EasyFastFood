@@ -34,9 +34,16 @@
                     <td style="color:#ffffff; background-color: #ED7B08;" align="center">
                         <asp:Button ID="ButtonEnded" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" OnClick="ButtonEnded_Click" />
                     </td>
+                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
+                        <asp:Button ID="compraConfirmadaBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Confirmada" ForeColor="White" OnClick="compraConfirmada" />
+                    </td>
+                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
+                        <asp:Button ID="CompraRechazada" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Rechazada" ForeColor="White" OnClick="compraRechazada" />
+                    </td>
+
                 </tr>
             </table>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
         </div>
     </div>
 </asp:Content>

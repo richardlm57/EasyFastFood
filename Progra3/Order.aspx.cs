@@ -32,4 +32,14 @@ public partial class _Default : System.Web.UI.Page
     {
         Response.Redirect("foodMenu.aspx");
     }
+
+    protected void compraConfirmada(object sender, EventArgs e)
+    {
+        Response.Redirect("compraConfirmada.aspx");
+    }
+
+    protected void compraRechazada(object sender, EventArgs e)
+    {
+        Response.Redirect("compraRechazada.aspx");
+    }
 }

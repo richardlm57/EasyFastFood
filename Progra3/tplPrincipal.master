@@ -11,6 +11,9 @@
         .auto-style4 {
             width: 220px;
             height: 220px;
+            position: relative;
+            top: 0px;
+            left: 2px;
         }
         </style>
 </head>
@@ -18,7 +21,7 @@
     <form id="form" runat="server">
     <div style="background-color: #ED7B08">
         <div style="display:inline-block;background-color: #ED7B08;position:relative;width:25%;left:40%">
-            <img style="position:relative;display:inline-block; top: 0px; left: 1px;" alt="" class="auto-style4" src="file:///C:/EasyFastFood/Progra3/Images/EasyFastFood.jpg" /><br />
+            <img style="display:inline-block; " alt="" class="auto-style4" src="Images/EasyFastFood.jpg" /><br />
         </div>
         <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-80px; left:40%">
             <div id="logged" style="display:none" runat="server">
