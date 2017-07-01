@@ -60,8 +60,7 @@
                         <asp:Label ID="lblOpc1" runat="server" Text=""></asp:Label>
                         </div>
                     <asp:Image ID="imgOpc1" runat="server" Height="138px" ImageAlign="Top" ImageUrl="~/Images/hamburguesa-francesa-preparaci-n-9641.jpg" Width="221px" />
-                    
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                   
                     
                     <div style="position:relative; left:300px;width:500px; font-family: 'kristen ITC'; background-color: #fefb64;">
                         

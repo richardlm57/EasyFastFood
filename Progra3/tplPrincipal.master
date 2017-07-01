@@ -25,7 +25,9 @@
         </div>
         <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-80px; left:40%">
             <div id="logged" style="display:none" runat="server">
-                Loggeado PA
+                
+                <br />
+                
                 <table align="center" class="auto-style1" style="width: 50%">
                     <tr>
                         <td style="color:#ffffff" align="center">

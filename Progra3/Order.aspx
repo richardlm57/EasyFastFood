@@ -22,10 +22,30 @@
             <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
                 <tr>
                     <td style="color:#ffffff" align="center"><asp:Label  ID="LabelTotal" runat="server" Text="Total = 0" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
+
                 </tr>
+                <br />
+                </table>
+                <br />
+                <br />
+                <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
+                 <tr>
+                    <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
+
+                </tr>
+                <tr>
+                    <td style="color:#ffffff" align="center"><asp:RadioButton ID="efecPay" runat="server"  /><asp:Label ID="Label2" runat="server" Text="Efectivo"></asp:Label>
+                        
+                </tr>
+               
+
+
             </table>
             <br />
             <br />
+            <br />
+            <br />
+            
             <table bgcolor="af3a11" align="center" class="auto-style10" style="width: 23%; background-color: #ED7B08;">
                 <tr>
                     <td style="color:#ffffff; background-color: #ED7B08;" align="center" class="auto-style9">

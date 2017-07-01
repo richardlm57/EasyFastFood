@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
             EnableSsl = true
         };
 
-        client.Send("salasbar97@gmail.com", "richardlm57@gmail.com", "Tomela", "Ya funciona pa");
+        client.Send("salasbar97@gmail.com", "richardlm57@gmail.com", "Comprobante de compra", "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra" + " \n " + "Hot dog salvatandas de 30 cm" + "\n" + "Una pepsi de lata y unas papas fritas" + "\n" + "Gracias por preferir Easy Fast Food ");
         Console.WriteLine("Sent");
     }
 
