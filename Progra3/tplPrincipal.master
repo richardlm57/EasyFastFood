@@ -25,7 +25,8 @@
         </div>
         <div style="display:inline-block;background-color: #ED7B08;position:relative;width:15%;top:-80px; left:40%">
             <div id="logged" style="display:none" runat="server">
-                Loggeado PA
+                <asp:Label ID="LabelLogged" style="color: #FFFFFF;" runat="server" Text="¡Bienvenido, David De Souza!" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label>
+               
                 <table align="center" class="auto-style1" style="width: 50%">
                     <tr>
                         <td style="color:#ffffff" align="center">
@@ -35,7 +36,6 @@
                 </table>     
             </div>
             <div id="notlogged" style="display:inline-block" runat="server">
-
                 <table class="auto-style10">
                     <tr>
                         <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelUsernameLogin" runat="server" Text="Nombre de usuario" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>

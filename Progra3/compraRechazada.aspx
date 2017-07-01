@@ -13,7 +13,7 @@
         <tr>
             <td style="background-color: #af3a11; text-align: center;">
                 <br />
-                <asp:Label ID="Label1" runat="server" Text="En estos momentos nuestos concineros están ocupados, no demorarán mas de 7 min"  Font-Size="Large" Font-Names="Kristen ITC,X-Large" ForeColor="White"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="En estos momentos nuestos cocineros están ocupados, no demorarán mas de 7 min"  Font-Size="Large" Font-Names="Kristen ITC,X-Large" ForeColor="White"></asp:Label>
                 
                 <br />
                 
