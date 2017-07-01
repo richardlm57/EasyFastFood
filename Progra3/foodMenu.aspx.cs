@@ -16,11 +16,6 @@ public partial class foodMenu : System.Web.UI.Page
         {
             Session["login"] = false;
         }
-        Label1.Text = "Alguna otra";
-        if (ProductList.products == null)
-        {
-            Label1.Text = "Primera vez";
-        }
         ProductList p = new ProductList();
         p.createProductList();
         foreach (Product product in ProductList.products)
