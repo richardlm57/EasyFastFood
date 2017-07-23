@@ -9,6 +9,6 @@ namespace App_Code
     public static class UsersControl
     {
 
-        public static ArrayList arrayUser = new ArrayList { new User("David", "De Souza", "salasbar97@gmail.com", "ronaldinhogaucho", "123", "Rio Do Janeiro") };
+        public static ArrayList arrayUser = new ArrayList { new User("David", "De Souza", "salasbar97@gmail.com", "david", "123", "Rio Do Janeiro",new ArrayList()) };
     }
 }
