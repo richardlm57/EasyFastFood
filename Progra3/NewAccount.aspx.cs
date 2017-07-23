@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using App_Code;
+using System.Collections;
 
 public partial class NewAccount : System.Web.UI.Page
 {
@@ -61,7 +62,7 @@ public partial class NewAccount : System.Web.UI.Page
             }
             if (exists == false)
             {
-                UsersControl.arrayUser.Add(new User(newName.Text, newSurname.Text, newUsername.Text, newPassword.Text, "123", newAddress.Text));
+                UsersControl.arrayUser.Add(new User(newName.Text, newSurname.Text, newUsername.Text, newPassword.Text, "123", newAddress.Text,new ArrayList()));
                 foreach (User u in arrayUser)
                 {
                     lblErrorNewAccount.Text += "\n"+u.username+" "+u.password;

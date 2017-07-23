@@ -74,8 +74,6 @@
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot1" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table>
-                        
-
                         <div style="position:relative;left:300px">
                         <input id="QtyOption1" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc1" runat="server" Text=""></asp:Label>
@@ -106,9 +104,10 @@
                         </table>
                     </div>
                     <div style="position:relative;left:300px">
-                        <input id="QtyOption2" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                      <input id="QtyOption2" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                          <asp:Label ID="LabelAddOpc2" runat="server"></asp:Label>
                         <br />
-                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                        <asp:Button ID="addBtnOpc2" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc2_Click" />
                     </div>
                 </td>
             </tr>
@@ -135,9 +134,10 @@
                             </tr>
                         </table></div>
                     <div style="position:relative;left:300px">
-                        <input id="QtyOption3" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                       <input id="QtyOption3" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                            <asp:Label ID="LabelAddOpc3" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:Button ID="Button2" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
+                        <asp:Button ID="addBtnOpc3" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc3_Click" />
                     </div>                    
                     <br />
                 </td>
@@ -163,15 +163,20 @@
                         </table>
                     </div>
                     <div style="position:relative;left:300px">
-                        <input id="QtyOption4" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <input id="QtyOption4" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                            <asp:Label ID="LabelAddOpc4" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:Button ID="Button3" runat="server" Font-Names="Kristen ITC" Text="Añadir" />
-                    </div>                    
-                </td>
+                        <asp:Button ID="addBtnOpc4" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc4_Click" />
+                    </div>
             </tr>
     </table>
     <div style="text-align:center" class="auto-style22">
         <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
+        <p style="background-color: #ED7B08">
+            <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Button" />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </p>
+        <p style="background-color: #ED7B08">&nbsp;</p>
     </div>
     </asp:Content>
 

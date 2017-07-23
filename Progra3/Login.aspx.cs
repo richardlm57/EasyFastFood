@@ -8,7 +8,6 @@ using App_Code;
 
 public partial class Login : System.Web.UI.Page
 {
-    
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["login"]==null)
@@ -35,7 +34,9 @@ public partial class Login : System.Web.UI.Page
             foreach (User u in arrayUser) {
                 if (u.username == txtUserName.Text && u.password == txtPassword.Text)
                 {
-                
+
+                Session["LoggedUser"] = u.username;
+                Session["emailUser"] = u.email;
                 Session["login"] = true;
                 Response.Redirect("foodMenu.aspx");
                 
