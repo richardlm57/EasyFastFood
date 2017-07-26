@@ -11,6 +11,25 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <style>
+        #order { 
+            border: 2px solid black;
+            border-collapse: collapse;
+            align-content: center;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            color: white;
+        }
+        #order th{ 
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+        #order td{ 
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+        </style>
     <div width="100%" style="background-color: #ED7B08;">
         <div style="margin:auto">
             <table bgcolor="af3a11" align="center" class="auto-style1" style="width: 30%">
@@ -27,25 +46,9 @@
                 </tr>
                 <br />
                 </table>
+            <asp:literal id="orderTable" runat="server"></asp:literal>
                 <br />
-                <br />
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4"  ForeColor="#333333" GridLines="None" >
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField HeaderText="Precio" />
-                </Columns>
-                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                <SortedDescendingHeaderStyle BackColor="#820000" />
-            </asp:GridView>
-                <br />
-                <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
+                <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%; display:inline-block">
                  <tr>
                     <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
 
