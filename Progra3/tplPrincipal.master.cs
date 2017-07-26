@@ -17,6 +17,7 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
         {
             logged.Attributes.CssStyle.Add("display", "inline-block");
             notlogged.Attributes.CssStyle.Add("display", "none");
+            LabelLogged.Text = "¡Bienvenido, " + Session["LoggedName"].ToString() + "!";
         }
         else
         {
@@ -39,7 +40,7 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
         {
             if (u.username == txtMiniUserName.Text && u.password == txtMiniPassword.Text)
             {
-
+                Session["LoggedName"] = u.name;
                 Session["LoggedUser"] = u.username;
                 Session["emailUser"] = u.email;
                 Session["login"] = true;

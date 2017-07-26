@@ -34,7 +34,7 @@ public partial class Login : System.Web.UI.Page
             foreach (User u in arrayUser) {
                 if (u.username == txtUserName.Text && u.password == txtPassword.Text)
                 {
-
+                Session["LoggedName"] = u.name;
                 Session["LoggedUser"] = u.username;
                 Session["emailUser"] = u.email;
                 Session["login"] = true;
