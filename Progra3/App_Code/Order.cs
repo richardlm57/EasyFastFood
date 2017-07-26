@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 
 public class Order
 {
@@ -22,26 +18,5 @@ public class Order
         this.status = status;
         this.id = id;
         this.products = products;
-    }
-
-    public void insertOrder(ArrayList userOrder)
-    {
-        products = userOrder;
-      
-    }
-
-    public void updateOrder(ArrayList userOrder)
-    {
-        products = userOrder;
-
-    }
-
-    public ArrayList selectOrder()
-    {
-        return products;
-    }
-
-    public void deleteOrder() {
-        products = null;
     }
 }

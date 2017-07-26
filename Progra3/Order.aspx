@@ -41,14 +41,14 @@
             <br />
             <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
                 <tr>
-                    <td style="color:#ffffff" align="center"><asp:Label  ID="LabelTotal" runat="server" Text="Total = 0" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
-
+                    <td style="color:#ffffff" align="center"><asp:Label  ID="labelTot" runat="server" Text="" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
                 </tr>
                 <br />
                 </table>
             <asp:literal id="orderTable" runat="server"></asp:literal>
                 <br />
                 <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%; display:inline-block">
+
                  <tr>
                     <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
 
@@ -62,6 +62,7 @@
 
             </table>
             <br />
+            <asp:Label ID="LabelTest" runat="server" Text=""></asp:Label>
             <br />
             <br />
             <br />
@@ -74,13 +75,6 @@
                     <td style="color:#ffffff; background-color: #ED7B08;" align="center">
                         <asp:Button ID="ButtonEnded" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" OnClick="ButtonEnded_Click" />
                     </td>
-                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
-                        <asp:Button ID="compraConfirmadaBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Confirmada" ForeColor="White" OnClick="compraConfirmada" />
-                    </td>
-                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
-                        <asp:Button ID="CompraRechazada" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Rechazada" ForeColor="White" OnClick="compraRechazada" />
-                    </td>
-
                 </tr>
             </table>
         

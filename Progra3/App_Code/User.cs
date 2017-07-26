@@ -13,12 +13,13 @@ public class User
     public String surname { get; set; }
     public String username { get; set; }
     public String password { get; set; }
-    public String telephone { get; set;}
+    public String telephone { get; set; }
     public String email { get; set; }
     public String address { get; set; }
     public ArrayList orders { get; set; }
+    public int balance{ get; set; }
 
-    public User(String name, String surname, String email, String password, String telephone, String address, ArrayList orders){
+    public User(String name, String surname, String email, String password, String telephone, String address, ArrayList orders,int balance){
         this.name = name;
         this.surname = surname;
         this.username = email;
@@ -26,5 +27,6 @@ public class User
         this.telephone = telephone;
         this.address = address;
         this.orders = orders;
+        this.balance = balance;
     }
 }

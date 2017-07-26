@@ -8,6 +8,7 @@ using System.ComponentModel;
 public partial class _Default : System.Web.UI.Page
 {
     ArrayList userOrder;
+    int userBalance;
     protected void Page_Load(object sender, EventArgs e)
     {
         userOrder = (ArrayList)Session["order"];
@@ -17,7 +18,9 @@ public partial class _Default : System.Web.UI.Page
         {
             if (user.username.Equals(Session["LoggedUser"]))
             {
+                userBalance = user.balance;
                 user.orders = (ArrayList)Session["order"];
+                
             }
         }
         string tableContent = "";
@@ -36,36 +39,34 @@ public partial class _Default : System.Web.UI.Page
 
     protected void ButtonEnded_Click(object sender, EventArgs e)
     {
-            ArrayList arrayUserOrder = (ArrayList)Session["order"];
-            String emailUser = (String)Session["emailUser"];
-            String orderDetail = "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
-            var client = new SmtpClient("smtp.gmail.com", 587)
-            {
-                Credentials = new NetworkCredential("salasbar97@gmail.com", "davidsalas97"),
-                EnableSsl = true
-            };
+        ArrayList arrayUserOrder = (ArrayList)Session["order"];
+        String emailUser = (String)Session["emailUser"];
+        String orderDetail= "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
+        var client = new SmtpClient("smtp.gmail.com", 587)
+        {
+            Credentials = new NetworkCredential("salasbar97@gmail.com", "davidsalas97"),
+            EnableSsl = true
+        };
 
-            foreach (Product product in userOrder)
-            {
-                orderDetail += "\n"+ product.descripcion +  "\n" + "por un total de: " + product.precio;
-            }
-            orderDetail += "\n\nGracias por preferir Easy Fast Food ";
-            //Convert.ToInt32(Session["totalTmp"]
-            //    if (userBalance >=100) {
-            client.Send("salasbar97@gmail.com", "richardlm57@gmail.com", "Comprobante de compra", orderDetail);
+        foreach (Product product in userOrder)
+        {
+            orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
+        }
+        orderDetail += "\nGracias por preferir Easy Fast Food ";
+        if (userBalance >=100) {
+            client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
             Response.Redirect("compraConfirmada.aspx");
-            //  }
-            //else
-            //{
-            //  Response.Redirect("compraRechazada.aspx");
-            // }
+        }
+        else
+        {
+            Response.Redirect("compraRechazada.aspx");
+        }
     }
-
     protected void ButtonAtras_Click(object sender, EventArgs e)
     {
         Response.Redirect("foodMenu.aspx");
     }
-
+    
     protected void compraConfirmada(object sender, EventArgs e)
     {
         Response.Redirect("compraConfirmada.aspx");
@@ -75,5 +76,4 @@ public partial class _Default : System.Web.UI.Page
     {
         Response.Redirect("compraRechazada.aspx");
     }
-
 }
