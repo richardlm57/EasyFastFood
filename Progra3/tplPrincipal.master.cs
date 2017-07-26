@@ -40,6 +40,8 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
             if (u.username == txtMiniUserName.Text && u.password == txtMiniPassword.Text)
             {
 
+                Session["LoggedUser"] = u.username;
+                Session["emailUser"] = u.email;
                 Session["login"] = true;
                 Response.Redirect("foodMenu.aspx");
 

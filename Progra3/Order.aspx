@@ -41,7 +41,7 @@
             <br />
             <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
                 <tr>
-                    <td style="color:#ffffff" align="center"><asp:Label  ID="labelTot" runat="server" Text="" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
+                    <td style="color:#ffffff" align="center"><asp:Label  ID="labelTotal" runat="server" Text="" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
                 </tr>
                 <br />
                 </table>
@@ -62,7 +62,7 @@
 
             </table>
             <br />
-            <asp:Label ID="LabelTest" runat="server" Text=""></asp:Label>
+            <asp:Label ID="LabelTest" runat="server" Text="No"></asp:Label>
             <br />
             <br />
             <br />

@@ -28,7 +28,7 @@
             <tr>
                 <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelBalance" runat="server" Text="Saldo" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
-                    <asp:TextBox ID="newBlance" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="newBalance" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>

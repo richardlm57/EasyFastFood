@@ -9,18 +9,19 @@ public partial class _Default : System.Web.UI.Page
 {
     ArrayList userOrder;
     int userBalance;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         userOrder = (ArrayList)Session["order"];
         var arrayUser = UsersControl.arrayUser;
-
+        LabelTest.Text = (String)Session["LoggedUser"];
         foreach (User user in arrayUser)
         {
             if (user.username.Equals(Session["LoggedUser"]))
             {
                 userBalance = user.balance;
                 user.orders = (ArrayList)Session["order"];
-                
+                LabelTest.Text = "Si";
             }
         }
         string tableContent = "";
@@ -34,7 +35,7 @@ public partial class _Default : System.Web.UI.Page
         tableText += "<th>Tiempo</th><th>Precio</th><th>Cantidad</th><th>Total</th>";
         tableText += tableContent + "</table>";
         orderTable.Text = tableText;
-        LabelTotal.Text = "Total = " + totalTmp.ToString();
+        labelTotal.Text = "Total = " + totalTmp.ToString();
     }
 
     protected void ButtonEnded_Click(object sender, EventArgs e)
