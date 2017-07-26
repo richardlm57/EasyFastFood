@@ -22,28 +22,12 @@
             <br />
             <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
                 <tr>
-                    <td style="color:#ffffff" align="center"><asp:Label  ID="LabelTotal" runat="server" Text="Total = 0" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
-
+                    <td style="color:#ffffff" align="center"><asp:Label  ID="labelTot" runat="server" Text="" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Medium"></asp:Label></td>
                 </tr>
                 <br />
                 </table>
                 <br />
                 <br />
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4"  ForeColor="#333333" GridLines="None" >
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField HeaderText="Precio" />
-                </Columns>
-                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                <SortedDescendingHeaderStyle BackColor="#820000" />
-            </asp:GridView>
                 <br />
                 <table bgcolor="af3a11" align="right" class="auto-style1" style="width: 23%">
                  <tr>
@@ -59,6 +43,7 @@
 
             </table>
             <br />
+            <asp:Label ID="LabelTest" runat="server" Text=""></asp:Label>
             <br />
             <br />
             <br />
@@ -71,13 +56,6 @@
                     <td style="color:#ffffff; background-color: #ED7B08;" align="center">
                         <asp:Button ID="ButtonEnded" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Finalizar pago" ForeColor="White" OnClick="ButtonEnded_Click" />
                     </td>
-                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
-                        <asp:Button ID="compraConfirmadaBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Confirmada" ForeColor="White" OnClick="compraConfirmada" />
-                    </td>
-                    <td style="color:#ffffff; background-color: #ED7B08;" align="center">
-                        <asp:Button ID="CompraRechazada" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Compra Rechazada" ForeColor="White" OnClick="compraRechazada" />
-                    </td>
-
                 </tr>
             </table>
         

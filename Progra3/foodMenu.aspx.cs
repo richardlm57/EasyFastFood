@@ -1,37 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using App_Code;
 
 
 public partial class foodMenu : System.Web.UI.Page
 {
-
+   
+    int totalPrice;
     protected void addProduct(Product product) {
-
         ArrayList orderTmp = (ArrayList)Session["order"];
         Boolean exists = false;
-        foreach (Product productTmp in orderTmp) {
-            if (productTmp.id == product.id)
+        //foreach (Product productTmp in orderTmp)
+        //{
+            if (totalPrice > 1)
             {
-                Label1.Text = "Si" + productTmp.id + " " + productTmp.cantidad;
-                productTmp.cantidad += product.cantidad;
-                exists = true;
+                Label1.Text = "el total es: " + totalPrice;
             }
-        }
-        if (!(exists)) {
-            Label1.Text = "No" + product.id + " " + product.cantidad;
-            orderTmp.Add(product);
-        }
-        Session["order"] = orderTmp;
+            /*if (productTmp.id == product.id)
+          {
+              Label1.Text = "Si" + productTmp.id + " " + productTmp.cantidad;
+              productTmp.cantidad += product.cantidad;
+              exists = true;
+          }
+      }
+      if (!(exists)) {
+          Label1.Text = "No" + product.id + " " + product.cantidad;
+          orderTmp.Add(product);
+      }*/
+            Session["order"] = orderTmp;
+        //}
     }
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        //Session["totalBuy"] = 2;
         if (Session["order"] == null)
         {
             Session["order"] = new ArrayList();
@@ -148,12 +150,18 @@ public partial class foodMenu : System.Web.UI.Page
     protected void Button5_Click(object sender, EventArgs e)
     {
         ArrayList orderTmp = (ArrayList)Session["order"];
-
-        Label1.Text = "Prueba: ";
-        foreach (Product product in orderTmp)
-        {
-            Label1.Text += product.id + " " + product.cantidad;
-        }
+        //oreach (Product productTmp in orderTmp)
+        //{
+            //if (totalPrice > 1)
+            //{
+                Label1.Text = "el total es: " + Session["totalBuy"].ToString();
+            //}
+            //Label1.Text = "Prueba: ";
+            // foreach (Product product in orderTmp)
+            //{
+            //Label1.Text+=product.id+""+ product.cantidad;
+            //Label1.Text = "total de compra: " + totalPrice;
+        //}
     }
 
     protected void addBtnOpc3_Click(object sender, EventArgs e)
@@ -188,7 +196,7 @@ public partial class foodMenu : System.Web.UI.Page
             if (tmp.cantidad - qty >= 0)
             {
                 tmp.cantidad -= qty;
-                Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
+                Product productOrder = new Product(tmp.id, tmp.descripcion,tmp.precio, tmp.tiempoRealizacion, qty);
                 ProductList.products[3] = tmp;
                 addProduct(productOrder);
                 LabelAddOpc4.Text = "Anadido";
