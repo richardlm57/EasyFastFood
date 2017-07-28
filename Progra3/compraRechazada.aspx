@@ -18,6 +18,13 @@
                 <br />
                 
     </table>
+    <table bgcolor="af3a11" align="center" class="auto-style10" style="width: 23%; background-color: #ED7B08;">
+        <tr>
+            <td style="color:#ffffff; background-color: #ED7B08;" align="center" class="auto-style9">
+                <asp:Button ID="atrasBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="ButtonAtras_Click" Width="122px" />
+            </td>
+        </tr>
+    </table>
     
 </asp:Content>
 

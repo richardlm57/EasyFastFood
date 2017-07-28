@@ -54,8 +54,9 @@ public partial class _Default : System.Web.UI.Page
             orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
         }
         orderDetail += "\nGracias por preferir Easy Fast Food ";
-        if (userBalance >=100) {
+        if (userBalance>=100) {
             client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
+            Session["order"] = new ArrayList();
             Response.Redirect("compraConfirmada.aspx");
         }
         else
