@@ -52,7 +52,7 @@ public partial class _Default : System.Web.UI.Page
         {
             user.balance = userBalance - totalTmp;
         }
-<<<<<<< HEAD
+
 
             foreach (Product product in userOrder)
              {
@@ -67,17 +67,7 @@ public partial class _Default : System.Web.UI.Page
              {
                  Response.Redirect("compraRechazada.aspx");
              }
-=======
-        orderDetail += "\nGracias por preferir Easy Fast Food ";
-        if (userBalance>=100) {
-            client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
-            Session["order"] = new ArrayList();
-            Response.Redirect("compraConfirmada.aspx");
-        }
-        else
-        {
-            Response.Redirect("compraRechazada.aspx");
->>>>>>> origin/master
+
         }
     protected void ButtonAtras_Click(object sender, EventArgs e)
     {
