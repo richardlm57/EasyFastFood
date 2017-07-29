@@ -13,7 +13,7 @@ public partial class _Default : System.Web.UI.Page
     ArrayList arrayUser = UsersControl.arrayUser;
     protected void Page_Load(object sender, EventArgs e)
     {
-        TextBox1.Enabled = false;
+        cardNumber.Enabled = false;
 
 
         userOrder = (ArrayList)Session["order"];
@@ -38,7 +38,7 @@ public partial class _Default : System.Web.UI.Page
         labelTotal.Text = "Total = " + totalTmp.ToString();
     }
 
-    protected void ButtonEnded_Click(object sender, EventArgs e)
+    protected void endPay(object sender, EventArgs e)
     {
         ArrayList arrayUserOrder = (ArrayList)Session["order"];
         String emailUser = (String)Session["emailUser"];
@@ -69,7 +69,7 @@ public partial class _Default : System.Web.UI.Page
              }
 
         }
-    protected void ButtonAtras_Click(object sender, EventArgs e)
+    protected void backPage(object sender, EventArgs e)
     {
         Response.Redirect("foodMenu.aspx");
     }
@@ -86,15 +86,15 @@ public partial class _Default : System.Web.UI.Page
 
     protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
     {
-        if (RadioButton2.Checked == true)
+        if (cardPay.Checked == true)
         {
-            TextBox1.Enabled = true;
+            cardNumber.Enabled = true;
         }
         else
         {
-            if (RadioButton2.Checked == false)
+            if (cardPay.Checked == false)
             {
-                TextBox1.Enabled = false;
+                cardNumber.Enabled = false;
             }
         }
     }

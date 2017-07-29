@@ -67,11 +67,11 @@
                 <tr>
                     <td style="color:#ffffff" align="center">
 
-                        <asp:Button ID="atrasBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="ButtonAtras_Click" Width="123px" />
+                        <asp:Button ID="atrasBTN" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="BtnAtras" Width="123px" />
                     </td>
                     <td style="color:#ffffff" align="center">
 
-                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Crear usuario" ForeColor="White" OnClick="ButtonCrearUsuario_Click" />
+                        <asp:Button ID="Button1" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Crear usuario" ForeColor="White" OnClick="BtnCrearUsuario" />
                     </td>
                 </tr>
             </table>

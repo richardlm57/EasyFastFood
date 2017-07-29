@@ -13,7 +13,7 @@ public partial class NewAccount : System.Web.UI.Page
     {
     }
 
-    protected void ButtonCrearUsuario_Click(object sender, EventArgs e)
+    protected void BtnCrearUsuario(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
 
@@ -71,7 +71,7 @@ public partial class NewAccount : System.Web.UI.Page
         }
     }
 
-    protected void ButtonAtras_Click(object sender, EventArgs e)
+    protected void BtnAtras(object sender, EventArgs e)
     {
         Response.Redirect("Login.aspx");
     }
