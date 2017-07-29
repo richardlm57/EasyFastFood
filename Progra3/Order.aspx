@@ -29,6 +29,9 @@
             border-collapse: collapse;
             padding: 15px;
         }
+        .auto-style11 {
+            height: 26px;
+        }
         </style>
     <div width="100%" style="background-color: #ED7B08;">
         <div style="margin:auto">
@@ -51,18 +54,21 @@
 
                  <tr>
                     <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
-
                 </tr>
                 <tr>
-                    <td style="color:#ffffff" align="center"><asp:RadioButton ID="efecPay" runat="server"  /><asp:Label ID="Label2" runat="server" Text="Efectivo"></asp:Label>
+                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="RadioButton1" runat="server" name="payType"  value="cash" GroupName="buyType"/>Efectivo
                         
                 </tr>
-               
-
-
-            </table>
+                    <tr>
+                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="RadioButton2" runat="server"  name="payType"  value="card" AutoPostBack="True"  OnCheckedChanged="RadioButton2_CheckedChanged" GroupName="buyType"/>Tarjeta
+                        </tr>
+                    <tr>
+                    <td style="color:#ffffff" align="center" class="auto-style11">
+                       <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    </table>
             <br />
-            <asp:Label ID="LabelTest" runat="server" Text="No"></asp:Label>
+            <br />
+            <br />
             <br />
             <br />
             <br />

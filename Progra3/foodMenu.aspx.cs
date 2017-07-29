@@ -20,14 +20,12 @@ public partial class foodMenu : System.Web.UI.Page
         {
             if (productTmp.id == product.id)
             {
-                Label1.Text = "Si" + productTmp.id + " " + productTmp.cantidad;
                 productTmp.cantidad += product.cantidad;
                 exists = true;
             }
         }
         if (!(exists))
         {
-            Label1.Text = "No" + product.id + " " + product.cantidad;
             orderTmp.Add(product);
         }
         Session["order"] = orderTmp;
@@ -90,7 +88,7 @@ public partial class foodMenu : System.Web.UI.Page
 
     }
 
-    protected void Button4_Click(object sender, EventArgs e)
+    protected void confirmBuy(object sender, EventArgs e)
     {
         var status = Session["login"];
         Boolean validation = Convert.ToBoolean(status);
@@ -155,11 +153,6 @@ public partial class foodMenu : System.Web.UI.Page
     {
         ArrayList orderTmp = (ArrayList)Session["order"];
 
-        Label1.Text = "Prueba: ";
-        foreach (Product product in orderTmp)
-        {
-            Label1.Text += product.id + " " + product.cantidad;
-        }
     }
 
     protected void addBtnOpc3_Click(object sender, EventArgs e)
@@ -201,9 +194,15 @@ public partial class foodMenu : System.Web.UI.Page
             }
             else
             {
-                LabelAddOpc3.Text = "No hay productos disponibles";
+                LabelAddOpc4.Text = "No hay productos disponibles";
             }
 
         }
+    }
+
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+
     }
 }
