@@ -9,7 +9,10 @@ public partial class compraConfirmada : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+    }
+    protected void ButtonAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("foodMenu.aspx");
     }
     
 }

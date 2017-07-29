@@ -24,6 +24,20 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
             notlogged.Attributes.CssStyle.Add("display", "inline-block");
             logged.Attributes.CssStyle.Add("display", "none");
         }
+        Boolean loginPage;
+        try
+        {
+            loginPage = Convert.ToBoolean(Session["pageLogin"]);
+        }
+        catch (Exception)
+        {
+            loginPage = false;
+        }
+        if (loginPage == true)
+        {
+            notlogged.Attributes.CssStyle.Add("display", "none");
+            logged.Attributes.CssStyle.Add("display", "none");
+        }
     }
 
     protected void ButtonMiniLogin_Click(object sender, EventArgs e)

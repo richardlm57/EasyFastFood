@@ -10,6 +10,7 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session["pageLogin"] = true;
         if (Session["login"]==null)
         {
             Session["login"] = false;
@@ -34,10 +35,11 @@ public partial class Login : System.Web.UI.Page
             foreach (User u in arrayUser) {
                 if (u.username == txtUserName.Text && u.password == txtPassword.Text)
                 {
+                Session["login"] = true;
                 Session["LoggedName"] = u.name;
                 Session["LoggedUser"] = u.username;
                 Session["emailUser"] = u.email;
-                Session["login"] = true;
+                Session["pageLogin"] = "";
                 Response.Redirect("foodMenu.aspx");
                 
                 }
@@ -62,6 +64,7 @@ public partial class Login : System.Web.UI.Page
     
     protected void ButtonAtras_Click(object sender, EventArgs e)
     {
+        Session["pageLogin"] = "";
         Response.Redirect("foodMenu.aspx");
     }
 }

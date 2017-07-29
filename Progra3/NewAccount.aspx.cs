@@ -11,7 +11,6 @@ public partial class NewAccount : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     protected void ButtonCrearUsuario_Click(object sender, EventArgs e)

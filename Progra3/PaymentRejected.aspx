@@ -1,18 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tplPrincipal.master" AutoEventWireup="true" CodeFile="compraConfirmada.aspx.cs" Inherits="compraConfirmada" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tplPrincipal.master" AutoEventWireup="true" CodeFile="PaymentRejected.aspx.cs" Inherits="PaymentRejected" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style5 {
-            width: 100%;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="auto-style5">
+    <table class="auto-style8">
         <tr>
-            <td style="background-color: #af3a11; text-align: center;" >
-                <asp:Label ID="Label1" runat="server" Text="SU PAGO FUE PROCESADO EXITOSAMENTE"  Font-Size="Large" Font-Names="Kristen ITC,X-Large" ForeColor="White"></asp:Label>
+            <td style="background-color: #af3a11; text-align: center;">
                 <br />
+                <asp:Label ID="Label1" runat="server" Text="No fue posible realizar la transacción. Intente nuevamente"  Font-Size="Large" Font-Names="Kristen ITC,X-Large" ForeColor="White"></asp:Label>
+                
                 <br />
             </td>
         </tr>
