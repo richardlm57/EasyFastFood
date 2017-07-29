@@ -15,7 +15,7 @@
 
         .auto-style16 {
             height: 180px;
-            width: 259px;
+            width: 228px;
         }
 
         .auto-style18 {
@@ -36,10 +36,11 @@
         .auto-style22 {
         position: relative;
         left: 2px;
-        top: 0px;
-    }
+        top: -3px;
+            height: 43px;
+        }
         .auto-style23 {
-            width: 259px;
+            width: 228px;
             height: 152px;
         }
         </style>
@@ -171,12 +172,7 @@
             </tr>
     </table>
     <div style="text-align:center" class="auto-style22">
-        <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="Button4_Click" /></p>
-        <p style="background-color: #ED7B08">
-            <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Button" />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p style="background-color: #ED7B08">&nbsp;</p>
+        <p style="background-color: #ED7B08"><asp:Button ID="Button4" runat="server" Text="Confirmar compra" BackColor="#AF3A11" Font-Names="Kristen ITC" Font-Size="Large" ForeColor="White" OnClick="confirmBuy" /></p>
     </div>
     </asp:Content>
 
