@@ -57,25 +57,18 @@
                     <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cashPay" runat="server" name="payType"  value="cash" GroupName="buyType"/>Efectivo
-=======
-                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="RadioButton1" runat="server" name="payType"  value="cash" AutoPostBack="True" GroupName="buyType" OnCheckedChanged="RadioButton1_CheckedChanged"/>Efectivo
->>>>>>> origin/master
-                        
+                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cashPay" runat="server" name="payType"  value="cash" GroupName="buyType" AutoPostBack="True" OnCheckedChanged="cashPayOption"/>Efectivo
                 </tr>
                     <tr>
-                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cardPay" runat="server"  name="payType"  value="card" AutoPostBack="True"  OnCheckedChanged="RadioButton2_CheckedChanged" GroupName="buyType"/>Tarjeta
+                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cardPay" runat="server"  name="payType"  value="card" AutoPostBack="True"  OnCheckedChanged="cardPayOption" GroupName="buyType"/>Tarjeta
                         </tr>
                     <tr>
                     <td style="color:#ffffff" align="center" class="auto-style11">
-<<<<<<< HEAD
-                       <asp:TextBox ID="cardNumber" runat="server"></asp:TextBox>
-=======
+
                         <div id="cardTextBox">
-                       <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox>
+                       <asp:TextBox ID="cardNumber" runat="server" Visible="False"></asp:TextBox>
                             </div>
->>>>>>> origin/master
+
                     </table>
                 </div>
             <br />
