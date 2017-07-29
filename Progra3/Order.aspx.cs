@@ -46,25 +46,30 @@ public partial class _Default : System.Web.UI.Page
             Credentials = new NetworkCredential("salasbar97@gmail.com", "davidsalas97"),
             EnableSsl = true
         };
-        foreach (User user in arrayUser)
-        {
-            user.balance = userBalance - totalTmp;
-        }
-
+        
 
             foreach (Product product in userOrder)
              {
                  orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
              }
              orderDetail += "\nGracias por preferir Easy Fast Food ";
-             if (userBalance >=totalTmp) {
-                
+             if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
                  client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
                  Session["order"] = new ArrayList();
-                 Response.Redirect("compraConfirmada.aspx");
+                    foreach (User user in arrayUser)
+                    {
+                        if (user.username.Equals(Session["LoggedUser"]))
+                        {
+                            if (cardPay.Checked == true)
+                            {
+                                user.balance = userBalance - totalTmp;
+                            }
+                        }
+                    }
+            Response.Redirect("compraConfirmada.aspx");
              }
-             else
-             {
+             else if (((userBalance < totalTmp) && (cardPay.Checked == true)))
+             {                
                  Response.Redirect("PaymentRejected.aspx");
              }
 
