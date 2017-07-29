@@ -13,9 +13,13 @@ public partial class _Default : System.Web.UI.Page
     ArrayList arrayUser = UsersControl.arrayUser;
     protected void Page_Load(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         cardNumber.Enabled = false;
 
 
+=======
+       
+>>>>>>> origin/master
         userOrder = (ArrayList)Session["order"];
         foreach (User user in arrayUser)
         {
@@ -60,7 +64,9 @@ public partial class _Default : System.Web.UI.Page
              }
              orderDetail += "\nGracias por preferir Easy Fast Food ";
              if (userBalance >=totalTmp) {
+                
                  client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
+                 Session["order"] = new ArrayList();
                  Response.Redirect("compraConfirmada.aspx");
              }
              else
@@ -88,6 +94,7 @@ public partial class _Default : System.Web.UI.Page
     {
         if (cardPay.Checked == true)
         {
+<<<<<<< HEAD
             cardNumber.Enabled = true;
         }
         else
@@ -96,6 +103,21 @@ public partial class _Default : System.Web.UI.Page
             {
                 cardNumber.Enabled = false;
             }
+=======
+            TextBox1.Visible = true;
+        }
+        else
+        {
+            TextBox1.Visible = false;
+        }
+    }
+
+    protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+    {
+        if (RadioButton1.Checked == true)
+        {
+            TextBox1.Visible = false;
+>>>>>>> origin/master
         }
     }
 }
