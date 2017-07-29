@@ -105,7 +105,7 @@ public partial class foodMenu : System.Web.UI.Page
 
     }
 
-    protected void addBtnOpc1_Click(object sender, EventArgs e)
+    protected void AddBtnOpc1(object sender, EventArgs e)
     {
         int qty = Convert.ToInt32(QtyOption1.Value);
         if (qty >= 0)
@@ -128,7 +128,7 @@ public partial class foodMenu : System.Web.UI.Page
 
 
 
-    protected void addBtnOpc2_Click(object sender, EventArgs e)
+    protected void AddBtnOpc2(object sender, EventArgs e)
     {
         int qty = Convert.ToInt32(QtyOption2.Value);
         if (qty >= 0)
@@ -155,7 +155,7 @@ public partial class foodMenu : System.Web.UI.Page
 
     }
 
-    protected void addBtnOpc3_Click(object sender, EventArgs e)
+    protected void AddBtnOpc3(object sender, EventArgs e)
     {
         int qty = Convert.ToInt32(QtyOption3.Value);
         if (qty >= 0)
@@ -177,7 +177,7 @@ public partial class foodMenu : System.Web.UI.Page
         }
     }
 
-    protected void addBtnOpc4_Click(object sender, EventArgs e)
+    protected void AddBtnOpc4(object sender, EventArgs e)
     {
 
         int qty = Convert.ToInt32(QtyOption4.Value);
@@ -198,11 +198,5 @@ public partial class foodMenu : System.Web.UI.Page
             }
 
         }
-    }
-
-
-    protected void Button4_Click(object sender, EventArgs e)
-    {
-
     }
 }

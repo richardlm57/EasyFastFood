@@ -65,7 +65,7 @@ public partial class _Default : System.Web.UI.Page
              }
              else
              {
-                 Response.Redirect("compraRechazada.aspx");
+                 Response.Redirect("PaymentRejected.aspx");
              }
 
         }

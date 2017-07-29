@@ -17,12 +17,12 @@ public partial class Login : System.Web.UI.Page
         }
     }
 
-    protected void LinkButton1_Click(object sender, EventArgs e)
+    protected void NewAccount(object sender, EventArgs e)
     {
         Response.Redirect("NewAccount.aspx");
     }
 
-    protected void ButtonLogin_Click(object sender, EventArgs e)
+    protected void BtnLogin(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
 
@@ -62,7 +62,7 @@ public partial class Login : System.Web.UI.Page
             }
         }
     
-    protected void ButtonAtras_Click(object sender, EventArgs e)
+    protected void BtnAtras(object sender, EventArgs e)
     {
         Session["pageLogin"] = "";
         Response.Redirect("foodMenu.aspx");

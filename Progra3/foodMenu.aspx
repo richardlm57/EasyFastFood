@@ -79,7 +79,7 @@
                         <input id="QtyOption1" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc1" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc1_Click" />
+                        <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc1" />
                     </div>
 
                 </td>
@@ -108,7 +108,7 @@
                       <input id="QtyOption2" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                           <asp:Label ID="LabelAddOpc2" runat="server"></asp:Label>
                         <br />
-                        <asp:Button ID="addBtnOpc2" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc2_Click" />
+                        <asp:Button ID="addBtnOpc2" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc2" />
                     </div>
                 </td>
             </tr>
@@ -138,7 +138,7 @@
                        <input id="QtyOption3" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc3" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:Button ID="addBtnOpc3" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc3_Click" />
+                        <asp:Button ID="addBtnOpc3" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc3" />
                     </div>                    
                     <br />
                 </td>
@@ -167,7 +167,7 @@
                         <input id="QtyOption4" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc4" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:Button ID="addBtnOpc4" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="addBtnOpc4_Click" />
+                        <asp:Button ID="addBtnOpc4" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc4" />
                     </div>
             </tr>
     </table>
