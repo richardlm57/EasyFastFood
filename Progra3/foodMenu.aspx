@@ -75,8 +75,8 @@
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot1" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table>
-                        <div style="position:relative;left:300px">
-                        <input id="QtyOption1" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <div >
+                        <input id="QtyOption1" runat="server" type="number" value="1" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc1" runat="server" Text=""></asp:Label>
                         <br />
                         <asp:Button ID="addBtnOpc1" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc1" />
@@ -103,13 +103,14 @@
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot2" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table>
-                    </div>
-                    <div style="position:relative;left:300px">
-                      <input id="QtyOption2" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <div style="font-family: 'kristen ITC';" >
+                      <input id="QtyOption2" runat="server" type="number" value="1" min="1" max="20" class="auto-style20"/>&nbsp;
                           <asp:Label ID="LabelAddOpc2" runat="server"></asp:Label>
                         <br />
                         <asp:Button ID="addBtnOpc2" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc2" />
                     </div>
+                    </div>
+                    
                 </td>
             </tr>
             <tr>
@@ -133,13 +134,15 @@
                                 <td   class="auto-style21"> <asp:Label ID="lblPriceOpc3" runat="server" Text=""></asp:Label></td>
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot3" runat="server" Text=""></asp:Label></td>
                             </tr>
-                        </table></div>
-                    <div style="position:relative;left:300px">
-                       <input id="QtyOption3" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        </table>
+                        <div style="font-family: 'kristen ITC'; top: 0px;">
+                       <input id="QtyOption3" runat="server" type="number" value="1" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc3" runat="server" Text=""></asp:Label>
                         <br />
                         <asp:Button ID="addBtnOpc3" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc3" />
-                    </div>                    
+                    </div>
+                    </div>
+                                        
                     <br />
                 </td>
                 <td class="auto-style23" style="background-color: #ED7B08; background-image: url('Images/descarga - Copy.jpg'); background-repeat: repeat-y;">
@@ -162,13 +165,14 @@
                                 <td class="auto-style21"> <asp:Label ID="lblPriceTot4" runat="server" Text=""></asp:Label></td>
                             </tr>
                         </table>
-                    </div>
-                    <div style="position:relative;left:300px">
-                        <input id="QtyOption4" runat="server" type="number" min="1" max="20" class="auto-style20"/>&nbsp;
+                        <div style="font-family: 'kristen ITC';">
+                        <input id="QtyOption4" runat="server" type="number" value="1" min="1" max="20" class="auto-style20"/>&nbsp;
                             <asp:Label ID="LabelAddOpc4" runat="server" Text=""></asp:Label>
                         <br />
                         <asp:Button ID="addBtnOpc4" runat="server" Font-Names="Kristen ITC" Text="Añadir" OnClick="AddBtnOpc4" />
                     </div>
+                    </div>
+                    
             </tr>
     </table>
     <div style="text-align:center" class="auto-style22">

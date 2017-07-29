@@ -84,6 +84,6 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
     protected void ButtonMiniLogout_Click(object sender, EventArgs e)
     {
         Session["login"] = false;
-        Response.Redirect(Request.RawUrl);
+        Response.Redirect("foodMenu.aspx");
     }
 }
