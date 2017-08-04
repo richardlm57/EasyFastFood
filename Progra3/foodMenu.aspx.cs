@@ -10,36 +10,20 @@ using App_Code;
 
 public partial class foodMenu : System.Web.UI.Page
 {
-
-    protected void addProduct(Product product)
-    {
-
-        ArrayList orderTmp = (ArrayList)Session["order"];
-        Boolean exists = false;
-        foreach (Product productTmp in orderTmp)
-        {
-            if (productTmp.id == product.id)
-            {
-                productTmp.cantidad += product.cantidad;
-                exists = true;
-            }
-        }
-        if (!(exists))
-        {
-            orderTmp.Add(product);
-        }
-        Session["order"] = orderTmp;
-    }
-
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["order"] == null)
         {
-            Session["order"] = new ArrayList();
+            Session["order"] = new Order(0,0,"","",1,new ArrayList());
         }
         if (Session["login"] == null)
         {
             Session["login"] = false;
+        }
+        if (Session["idOrder"] == null)
+        {
+            Session["idOrder"] = 1;
         }
         ProductList p = new ProductList();
         p.createProductList();
@@ -94,8 +78,8 @@ public partial class foodMenu : System.Web.UI.Page
         Boolean validation = Convert.ToBoolean(status);
         if (validation == true)
         {
-            ArrayList orderTmp = (ArrayList)Session["order"];
-            Session["orderObject"] = new Order(0, 0, "Efectivo", "Pendiente", 1, orderTmp);
+            Order orderTmp = (Order)Session["order"];
+            //Session["orderObject"] = new Order(0, 0, "Efectivo", "Pendiente", 1, orderTmp);
             Response.Redirect("Order.aspx");
         }
         else
@@ -107,6 +91,8 @@ public partial class foodMenu : System.Web.UI.Page
 
     protected void AddBtnOpc1(object sender, EventArgs e)
     {
+        Order orderTmp = (Order)Session["order"];
+
         int qty = Convert.ToInt32(QtyOption1.Value);
         if (qty >= 0)
         {
@@ -117,7 +103,7 @@ public partial class foodMenu : System.Web.UI.Page
                 Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
                 ProductList.products[0] = tmp;
                 LabelAddOpc1.Text = "Anadido";
-                addProduct(productOrder);
+                orderTmp.addProduct(productOrder);
             }
             else
             {
@@ -130,6 +116,8 @@ public partial class foodMenu : System.Web.UI.Page
 
     protected void AddBtnOpc2(object sender, EventArgs e)
     {
+        Order orderTmp = (Order)Session["order"];
+
         int qty = Convert.ToInt32(QtyOption2.Value);
         if (qty >= 0)
         {
@@ -139,7 +127,7 @@ public partial class foodMenu : System.Web.UI.Page
                 tmp.cantidad -= qty;
                 Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
                 ProductList.products[1] = tmp;
-                addProduct(productOrder);
+                orderTmp.addProduct(productOrder);
                 LabelAddOpc2.Text = "Anadido";
             }
             else
@@ -148,15 +136,11 @@ public partial class foodMenu : System.Web.UI.Page
             }
         }
     }
-
-    protected void Button5_Click(object sender, EventArgs e)
-    {
-        ArrayList orderTmp = (ArrayList)Session["order"];
-
-    }
-
+    
     protected void AddBtnOpc3(object sender, EventArgs e)
     {
+        Order orderTmp = (Order)Session["order"];
+
         int qty = Convert.ToInt32(QtyOption3.Value);
         if (qty >= 0)
         {
@@ -166,7 +150,7 @@ public partial class foodMenu : System.Web.UI.Page
                 tmp.cantidad -= qty;
                 Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
                 ProductList.products[2] = tmp;
-                addProduct(productOrder);
+                orderTmp.addProduct(productOrder);
                 LabelAddOpc3.Text = "Anadido";
             }
             else
@@ -180,6 +164,8 @@ public partial class foodMenu : System.Web.UI.Page
     protected void AddBtnOpc4(object sender, EventArgs e)
     {
 
+        Order orderTmp = (Order)Session["order"];
+
         int qty = Convert.ToInt32(QtyOption4.Value);
         if (qty >= 0)
         {
@@ -189,7 +175,7 @@ public partial class foodMenu : System.Web.UI.Page
                 tmp.cantidad -= qty;
                 Product productOrder = new Product(tmp.id, tmp.descripcion, tmp.precio, tmp.tiempoRealizacion, qty);
                 ProductList.products[3] = tmp;
-                addProduct(productOrder);
+                orderTmp.addProduct(productOrder);
                 LabelAddOpc4.Text = "Anadido";
             }
             else

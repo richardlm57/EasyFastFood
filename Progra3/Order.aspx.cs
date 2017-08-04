@@ -6,25 +6,24 @@ using System.Collections;
 
 public partial class _Default : System.Web.UI.Page
 {
-    ArrayList userOrder;
+    Order userOrder;
     int userBalance;
     int totalTmp = 0;
-    Boolean payTypeCard =false;
     ArrayList arrayUser = UsersControl.arrayUser;
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        userOrder = (ArrayList)Session["order"];
+        userOrder = (Order)Session["order"];
         foreach (User user in arrayUser)
         {
             if (user.username.Equals(Session["LoggedUser"]))
             {
                 userBalance = user.balance;
-                user.orders = (ArrayList)Session["order"];
             }
         }
         string tableContent = "";
-        foreach (Product p in userOrder){
+        foreach (Product p in userOrder.products){
             tableContent += "<tr><td>"+p.descripcion+"</td><td>"+p.tiempoRealizacion+"</td>";
             tableContent += "<td>" + p.precio + "</td><td>" + p.cantidad + "</td><td>" + (p.precio*p.cantidad);
             totalTmp += (p.precio * p.cantidad);
@@ -34,11 +33,12 @@ public partial class _Default : System.Web.UI.Page
         tableText += tableContent + "</table>";
         orderTable.Text = tableText;
         labelTotal.Text = "Total = " + totalTmp.ToString();
+        userOrder.total = totalTmp;
+        userOrder.status = "Pendiente";
     }
 
     protected void endPay(object sender, EventArgs e)
     {
-        ArrayList arrayUserOrder = (ArrayList)Session["order"];
         String emailUser = (String)Session["emailUser"];
         String orderDetail= "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
         var client = new SmtpClient("smtp.gmail.com", 587)
@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
         };
         
 
-            foreach (Product product in userOrder)
+            foreach (Product product in userOrder.products)
              {
                  orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
              }
@@ -56,17 +56,29 @@ public partial class _Default : System.Web.UI.Page
              if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
                  client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
                  Session["order"] = new ArrayList();
-                    foreach (User user in arrayUser)
+                 foreach (User user in arrayUser)
+                 {
+                    if (user.username.Equals(Session["LoggedUser"]))
                     {
-                        if (user.username.Equals(Session["LoggedUser"]))
+                        if (cardPay.Checked == true)
                         {
+                            user.balance = userBalance - totalTmp;
+                            userOrder.status = "Completada";
                             if (cardPay.Checked == true)
-                            {
-                                user.balance = userBalance - totalTmp;
-                            }
+                        {
+                            userOrder.tipoPago = "Tarjeta";
+                        }
+                            if (cashPay.Checked == true)
+                        {
+                            userOrder.tipoPago = "Efectivo";
+
+                        }
+                        user.orders.Add(userOrder);
                         }
                     }
-            Response.Redirect("compraConfirmada.aspx");
+                 }
+                Session["order"] = null;
+                Response.Redirect("compraConfirmada.aspx");
              }
              else if (((userBalance < totalTmp) && (cardPay.Checked == true)))
              {                

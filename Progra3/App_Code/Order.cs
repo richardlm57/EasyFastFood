@@ -19,4 +19,22 @@ public class Order
         this.id = id;
         this.products = products;
     }
+
+    public void addProduct(Product product)
+    {
+
+        Boolean exists = false;
+        foreach (Product productTmp in products)
+        {
+            if (productTmp.id == product.id)
+            {
+                productTmp.cantidad += product.cantidad;
+                exists = true;
+            }
+        }
+        if (!(exists))
+        {
+            products.Add(product);
+        }
+    }
 }
