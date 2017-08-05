@@ -38,7 +38,6 @@ public partial class foodMenu : System.Web.UI.Page
         if (validation == true)
         {
             Order orderTmp = (Order)Session["order"];
-            //Session["orderObject"] = new Order(0, 0, "Efectivo", "Pendiente", 1, orderTmp);
             Response.Redirect("Order.aspx");
         }
         else
