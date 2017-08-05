@@ -9,12 +9,18 @@ public partial class _Default : System.Web.UI.Page
     Order userOrder;
     int userBalance;
     int totalTmp = 0;
+    string tableContent = "";
+    String orderDetail;
     ArrayList arrayUser = UsersControl.arrayUser;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
         userOrder = (Order)Session["order"];
+        getUserBalance();
+        createTable();
+    }
+    protected void getUserBalance()
+    {
         foreach (User user in arrayUser)
         {
             if (user.username.Equals(Session["LoggedUser"]))
@@ -22,10 +28,13 @@ public partial class _Default : System.Web.UI.Page
                 userBalance = user.balance;
             }
         }
-        string tableContent = "";
-        foreach (Product p in userOrder.products){
-            tableContent += "<tr><td>"+p.descripcion+"</td><td>"+p.tiempoRealizacion+"</td>";
-            tableContent += "<td>" + p.precio + "</td><td>" + p.cantidad + "</td><td>" + (p.precio*p.cantidad);
+    }
+    protected void createTable()
+    {
+        foreach (Product p in userOrder.products)
+        {
+            tableContent += "<tr><td>" + p.descripcion + "</td><td>" + p.tiempoRealizacion + "</td>";
+            tableContent += "<td>" + p.precio + "</td><td>" + p.cantidad + "</td><td>" + (p.precio * p.cantidad);
             totalTmp += (p.precio * p.cantidad);
         }
         var tableText = "<table bgcolor=\"af3a11\" id=\"order\"><tr><th>Descripción</th>";
@@ -36,26 +45,27 @@ public partial class _Default : System.Web.UI.Page
         userOrder.total = totalTmp;
         userOrder.status = "Pendiente";
     }
-
-    protected void endPay(object sender, EventArgs e)
+    protected void sendEmail()
     {
-        String emailUser = (String)Session["emailUser"];
-        String orderDetail= "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
+        orderDetail= "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
         var client = new SmtpClient("smtp.gmail.com", 587)
         {
             Credentials = new NetworkCredential("salasbar97@gmail.com", "davidsalas97"),
             EnableSsl = true
         };
-        
+        foreach (Product product in userOrder.products)
+        {
+            orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
+        }
+        orderDetail += "\nGracias por preferir Easy Fast Food ";
+        client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
 
-            foreach (Product product in userOrder.products)
-             {
-                 orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
-             }
-             orderDetail += "\nGracias por preferir Easy Fast Food ";
+    }
+    protected void endPay(object sender, EventArgs e)
+    {
              if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
-                 client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
-                 Session["order"] = new ArrayList();
+             sendEmail();
+                Session["order"] = new ArrayList();
                  foreach (User user in arrayUser)
                  {
                     if (user.username.Equals(Session["LoggedUser"]))

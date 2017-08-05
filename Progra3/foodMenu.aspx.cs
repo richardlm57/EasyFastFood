@@ -27,6 +27,29 @@ public partial class foodMenu : System.Web.UI.Page
         }
         ProductList p = new ProductList();
         p.createProductList();
+        setMenuData();
+
+    }
+
+    protected void confirmBuy(object sender, EventArgs e)
+    {
+        var status = Session["login"];
+        Boolean validation = Convert.ToBoolean(status);
+        if (validation == true)
+        {
+            Order orderTmp = (Order)Session["order"];
+            //Session["orderObject"] = new Order(0, 0, "Efectivo", "Pendiente", 1, orderTmp);
+            Response.Redirect("Order.aspx");
+        }
+        else
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+    }
+
+    protected void setMenuData()
+    {
         foreach (Product product in ProductList.products)
         {
             if (product.id == 1)
@@ -69,24 +92,6 @@ public partial class foodMenu : System.Web.UI.Page
             }
 
         }
-
-    }
-
-    protected void confirmBuy(object sender, EventArgs e)
-    {
-        var status = Session["login"];
-        Boolean validation = Convert.ToBoolean(status);
-        if (validation == true)
-        {
-            Order orderTmp = (Order)Session["order"];
-            //Session["orderObject"] = new Order(0, 0, "Efectivo", "Pendiente", 1, orderTmp);
-            Response.Redirect("Order.aspx");
-        }
-        else
-        {
-            Response.Redirect("Login.aspx");
-        }
-
     }
 
     protected void AddBtnOpc1(object sender, EventArgs e)
