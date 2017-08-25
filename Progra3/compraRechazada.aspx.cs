@@ -11,7 +11,7 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
-    //This method redirect to order
+    //This method redirect to order web page
     protected void ButtonAtras_Click(object sender, EventArgs e)
     {
         Response.Redirect("Order.aspx");

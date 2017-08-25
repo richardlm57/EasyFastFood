@@ -9,6 +9,9 @@ using App_Code;
 
 public partial class tplPrincipal : System.Web.UI.MasterPage
 {
+    /*
+     *This method was developed in order to change the UI of loggin page when the user is logged or not 
+     */ 
     protected void Page_Load(object sender, EventArgs e)
     {
         var status = Session["login"];
@@ -39,7 +42,10 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
             logged.Attributes.CssStyle.Add("display", "none");
         }
     }
-
+    /*
+     *This method it is in charge to perform all the validations to see if according what the user type
+     * it is valid to be logged
+     */
     protected void ButtonMiniLogin_Click(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
@@ -47,9 +53,6 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
         txtMiniUserName.BorderColor = System.Drawing.Color.WhiteSmoke;
         txtMiniPassword.BorderColor = System.Drawing.Color.WhiteSmoke;
         lblErrorLogin.Text = "";
-
-
-
         foreach (User u in arrayUser)
         {
             if (u.username == txtMiniUserName.Text && u.password == txtMiniPassword.Text)
@@ -59,7 +62,6 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
                 Session["emailUser"] = u.email;
                 Session["login"] = true;
                 Response.Redirect("foodMenu.aspx");
-
             }
         }
 
@@ -80,7 +82,9 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
             txtMiniPassword.BorderColor = System.Drawing.Color.Red;
         }
     }
-
+    /*
+     * This method will perform the loggout of the user.
+     */ 
     protected void ButtonMiniLogout_Click(object sender, EventArgs e)
     {
         Session["login"] = false;

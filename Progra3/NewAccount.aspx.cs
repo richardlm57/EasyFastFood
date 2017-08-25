@@ -12,7 +12,10 @@ public partial class NewAccount : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
     }
-
+    /**
+     * 
+     * Here is where all the validations are performed to create a new user.
+     */ 
     protected void BtnCrearUsuario(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
