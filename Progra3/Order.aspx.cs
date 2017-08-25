@@ -63,7 +63,10 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void endPay(object sender, EventArgs e)
     {
-             if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
+            if ((cardPay.Checked == true) && (cardNumber.Value == "")){
+                LabelCard.Text = "El numero de tarjeta es invalido";
+            } 
+            else if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
              sendEmail();
                 Session["order"] = new ArrayList();
                  foreach (User user in arrayUser)
@@ -116,11 +119,11 @@ public partial class _Default : System.Web.UI.Page
         if (cardPay.Checked == true)
         {
 
-            cardNumber.Visible = true;
+            cardNumber.Attributes.CssStyle.Add("display", "inline-block");
         }
         else
         {
-            cardNumber.Visible = false;
+            cardNumber.Attributes.CssStyle.Add("display", "none");
         }
     }
 
@@ -128,7 +131,8 @@ public partial class _Default : System.Web.UI.Page
     {
         if (cashPay.Checked == true)
         {
-            cardNumber.Visible = false;
+            cardNumber.Attributes.CssStyle.Add("display", "none");
+            LabelCard.Text = "";
 
         }
     }

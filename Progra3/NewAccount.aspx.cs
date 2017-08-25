@@ -38,6 +38,10 @@ public partial class NewAccount : System.Web.UI.Page
         {
             lblErrorNewAccount.Text = "\nLa contraseña es obligatoria";
         }
+        else if (newBalance.Value == "")
+        {
+            lblErrorNewAccount.Text = "\nEl saldo es obligatorio";
+        }
         else if (confirmPassword.Text == "")
         {
             lblErrorNewAccount.Text = "\nLa confirmación de contraseña es obligatoria";
@@ -61,7 +65,7 @@ public partial class NewAccount : System.Web.UI.Page
             }
             if (exists == false)
             {
-                UsersControl.arrayUser.Add(new User(newName.Text, newSurname.Text, newUsername.Text, newPassword.Text, "123", newAddress.Text,new ArrayList(),Convert.ToInt32(newBalance.Text)));
+                UsersControl.arrayUser.Add(new User(newName.Text, newSurname.Text, newUsername.Text, newPassword.Text, "123", newAddress.Text,new ArrayList(),Convert.ToInt32(newBalance.Value)));
                 foreach (User u in arrayUser)
                 {
                     lblErrorNewAccount.Text += "\n"+u.username+" "+u.password;

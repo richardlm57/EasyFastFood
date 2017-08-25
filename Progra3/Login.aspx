@@ -34,15 +34,15 @@
         <table align="center" class="auto-style1" style="width: 50%">
                 <tr>
                     <td style="color:#ffffff" align="center">
-                        <asp:Button ID="ButtonAtras" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="BtnAtras" />
+                        <asp:Button ID="ButtonLogin" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Login" ForeColor="White" OnClick="BtnLogin" />
                     </td>
                     
                     <td style="color:#ffffff" align="center">
-                        <asp:Button ID="ButtonLogin" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Login" ForeColor="White" OnClick="BtnLogin" />
+                        <asp:Button ID="ButtonAtras" runat="server" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" Text="Atras" ForeColor="White" OnClick="BtnAtras" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="color:#ffffff" colspan="2">
+                    <td style="color:#ffffff" colspan="2" align="center">
                         <asp:LinkButton  ID="LinkButton1" runat="server" OnClick="NewAccount" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Small" BackColor="#af3a11" ForeColor="White">Nueva cuenta</asp:LinkButton>
                     </td>
                 </tr>

@@ -66,7 +66,9 @@
                     <td style="color:#ffffff" align="center" class="auto-style11">
 
                         <div id="cardTextBox">
-                       <asp:TextBox ID="cardNumber" runat="server" Visible="False"></asp:TextBox>
+                            <input style="display:none" id="cardNumber" runat="server" type="number" min="1" class="auto-style20"/>
+                            <br />
+                            <asp:Label ID="LabelCard" runat="server"></asp:Label>
                             </div>
 
                     </table>
