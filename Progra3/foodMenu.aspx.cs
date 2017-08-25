@@ -13,6 +13,9 @@ public partial class foodMenu : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        ProductList p = new ProductList();
+
         if (Session["order"] == null)
         {
             Session["order"] = new Order(0,0,"","",1,new ArrayList());
@@ -25,7 +28,6 @@ public partial class foodMenu : System.Web.UI.Page
         {
             Session["idOrder"] = 1;
         }
-        ProductList p = new ProductList();
         p.createProductList();
         setMenuData();
 

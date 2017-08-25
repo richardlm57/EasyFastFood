@@ -13,6 +13,8 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
     {
         var status = Session["login"];
         Boolean validation = Convert.ToBoolean(status);
+        Boolean loginPage;
+
         if (validation == true)
         {
             logged.Attributes.CssStyle.Add("display", "inline-block");
@@ -24,7 +26,6 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
             notlogged.Attributes.CssStyle.Add("display", "inline-block");
             logged.Attributes.CssStyle.Add("display", "none");
         }
-        Boolean loginPage;
         try
         {
             loginPage = Convert.ToBoolean(Session["pageLogin"]);
@@ -85,5 +86,11 @@ public partial class tplPrincipal : System.Web.UI.MasterPage
     {
         Session["login"] = false;
         Response.Redirect("foodMenu.aspx");
+    }
+
+    protected void NewAccountMini(object sender, EventArgs e)
+    {
+        Session["pageLogin"] = true;
+        Response.Redirect("NewAccount.aspx");
     }
 }

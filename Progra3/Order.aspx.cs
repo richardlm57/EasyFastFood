@@ -67,7 +67,7 @@ public partial class _Default : System.Web.UI.Page
                 LabelCard.Text = "El numero de tarjeta es invalido";
             } 
             else if (((userBalance >=totalTmp)&&(cardPay.Checked == true)) || (cashPay.Checked == true)){
-             sendEmail();
+                sendEmail();
                 Session["order"] = new ArrayList();
                  foreach (User user in arrayUser)
                  {
@@ -104,16 +104,6 @@ public partial class _Default : System.Web.UI.Page
         Response.Redirect("foodMenu.aspx");
     }
     
-    protected void compraConfirmada(object sender, EventArgs e)
-    {
-        Response.Redirect("compraConfirmada.aspx");
-    }
-
-    protected void compraRechazada(object sender, EventArgs e)
-    {
-        Response.Redirect("compraRechazada.aspx");
-    }
-
     protected void cardPayOption(object sender, EventArgs e)
     {
         if (cardPay.Checked == true)
