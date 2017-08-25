@@ -10,7 +10,7 @@ using App_Code;
 
 public partial class foodMenu : System.Web.UI.Page
 {
-    
+    //On this page load method we validate if an order already has been created with our session value.
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -32,7 +32,7 @@ public partial class foodMenu : System.Web.UI.Page
         setMenuData();
 
     }
-
+    //In this method we are going to confirm our buy, first we validate if the user is already logged
     protected void confirmBuy(object sender, EventArgs e)
     {
         var status = Session["login"];
@@ -48,7 +48,9 @@ public partial class foodMenu : System.Web.UI.Page
         }
 
     }
-
+    /*
+     *In this method we set the values of the information that we see in our menu 
+     */
     protected void setMenuData()
     {
         foreach (Product product in ProductList.products)
@@ -94,7 +96,10 @@ public partial class foodMenu : System.Web.UI.Page
 
         }
     }
-
+    /*
+     * This is the first button that we see on our first option of the menu.
+     * We validate if the selection is higher than 0 then we add this to the user order.
+     */ 
     protected void AddBtnOpc1(object sender, EventArgs e)
     {
         Order orderTmp = (Order)Session["order"];
@@ -117,9 +122,10 @@ public partial class foodMenu : System.Web.UI.Page
             }
         }
     }
-
-
-
+    /*
+     * This is the second button that we see on our second option of the menu.
+     * We validate if the selection is higher than 0 then we add this to the user order.
+     */
     protected void AddBtnOpc2(object sender, EventArgs e)
     {
         Order orderTmp = (Order)Session["order"];
@@ -142,7 +148,10 @@ public partial class foodMenu : System.Web.UI.Page
             }
         }
     }
-    
+    /*
+     * This is the third button that we see on our third option of the menu.
+     * We validate if the selection is higher than 0 then we add this to the user order.
+     */
     protected void AddBtnOpc3(object sender, EventArgs e)
     {
         Order orderTmp = (Order)Session["order"];
@@ -166,7 +175,10 @@ public partial class foodMenu : System.Web.UI.Page
 
         }
     }
-
+    /*
+     * This is the fourth button that we see on our fourth option of the menu.
+     * We validate if the selection is higher than 0 then we add this to the user order.
+     */
     protected void AddBtnOpc4(object sender, EventArgs e)
     {
 

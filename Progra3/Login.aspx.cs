@@ -8,6 +8,10 @@ using App_Code;
 
 public partial class Login : System.Web.UI.Page
 {
+    /**
+     * 
+     * On the page load we validate if a user is already logged
+     */ 
     protected void Page_Load(object sender, EventArgs e)
     {
         Session["pageLogin"] = true;
@@ -17,11 +21,16 @@ public partial class Login : System.Web.UI.Page
         }
     }
 
+    /*
+     * This is the method to be redirected to the webpage in order to create your new account.
+     */
     protected void NewAccount(object sender, EventArgs e)
     {
         Response.Redirect("NewAccount.aspx");
     }
-
+    /*
+     * This is method is to be logged in the system in order to buy the food
+     */ 
     protected void BtnLogin(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
@@ -61,7 +70,9 @@ public partial class Login : System.Web.UI.Page
                 txtPassword.BorderColor = System.Drawing.Color.Red;
             }
         }
-    
+    /*
+     * This button is to go back to the main page.
+     */ 
     protected void BtnAtras(object sender, EventArgs e)
     {
         Session["pageLogin"] = "";

@@ -12,13 +12,18 @@ public partial class _Default : System.Web.UI.Page
     string tableContent = "";
     String orderDetail;
     ArrayList arrayUser = UsersControl.arrayUser;
-
+    /**
+     * this method is really simple because it loads all the requiered methods to see all the information on the UI 
+     */ 
     protected void Page_Load(object sender, EventArgs e)
     {
         userOrder = (Order)Session["order"];
         getUserBalance();
         createTable();
     }
+    /**
+     * This method it is requiered to know the balance of the user, to verify if he is able to perform a buy with card
+     */ 
     protected void getUserBalance()
     {
         foreach (User user in arrayUser)
@@ -29,6 +34,9 @@ public partial class _Default : System.Web.UI.Page
             }
         }
     }
+    /**
+     * This method will show the table that we see on this page, with all the information of the buy
+     */ 
     protected void createTable()
     {
         foreach (Product p in userOrder.products)
@@ -45,6 +53,9 @@ public partial class _Default : System.Web.UI.Page
         userOrder.total = totalTmp;
         userOrder.status = "Pendiente";
     }
+    /*
+     * This method will send an email to the user after the buy has been already validated.
+     */ 
     protected void sendEmail()
     {
         orderDetail= "Su orden fue procesada correctamente" + "\n" + "Comprobante de compra";
@@ -59,8 +70,11 @@ public partial class _Default : System.Web.UI.Page
         }
         orderDetail += "\nGracias por preferir Easy Fast Food ";
         client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
-
     }
+    /*
+     * This method will finish the buy of the user.
+     * There are some validations that it should be performed in order to see if the user is able to perform the buy
+     */ 
     protected void endPay(object sender, EventArgs e)
     {
             if ((cardPay.Checked == true) && (cardNumber.Value == "")){
@@ -99,11 +113,16 @@ public partial class _Default : System.Web.UI.Page
              }
 
         }
+    /*
+     * This button will redirect to the main page
+     */ 
     protected void backPage(object sender, EventArgs e)
     {
         Response.Redirect("foodMenu.aspx");
     }
-    
+    /**
+     * This method is where the user selects that he will be performing his buy by card payment.
+     */ 
     protected void cardPayOption(object sender, EventArgs e)
     {
         if (cardPay.Checked == true)
@@ -116,7 +135,9 @@ public partial class _Default : System.Web.UI.Page
             cardNumber.Attributes.CssStyle.Add("display", "none");
         }
     }
-
+    /**
+    * This method is where the user selects that he will be performing his buy by cash payment.
+    */
     protected void cashPayOption(object sender, EventArgs e)
     {
         if (cashPay.Checked == true)
