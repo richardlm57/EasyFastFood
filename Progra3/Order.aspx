@@ -57,7 +57,7 @@
                     <td style="color:#ffffff" align="center"><asp:Label  ID="Label1" runat="server" Text="Metodo de pago" Font-Names="Kristen ITC,X-Large" text-align="center" Font-Size="Large"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cashPay" runat="server" name="payType"  value="cash" GroupName="buyType" AutoPostBack="True" OnCheckedChanged="cashPayOption"/>Efectivo
+                    <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cashPay" runat="server" name="payType"  value="cash" GroupName="buyType" AutoPostBack="True" OnCheckedChanged="cashPayOption" Checked="True"/>Efectivo
                 </tr>
                     <tr>
                     <td style="color:#ffffff" align="center" class="auto-style11"><asp:RadioButton ID="cardPay" runat="server"  name="payType"  value="card" AutoPostBack="True"  OnCheckedChanged="cardPayOption" GroupName="buyType"/>Tarjeta
