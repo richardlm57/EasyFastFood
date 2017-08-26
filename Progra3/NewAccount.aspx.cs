@@ -19,7 +19,6 @@ public partial class NewAccount : System.Web.UI.Page
     protected void BtnCrearUsuario(object sender, EventArgs e)
     {
         var arrayUser = UsersControl.arrayUser;
-        Boolean exists = true;
 
         lblErrorNewAccount.Text = "";
         if (newName.Text == "")
@@ -56,6 +55,7 @@ public partial class NewAccount : System.Web.UI.Page
         }
         else
         {
+            Boolean exists = true;
             foreach (User u in arrayUser)
             {
                 exists = false;

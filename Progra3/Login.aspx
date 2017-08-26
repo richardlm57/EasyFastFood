@@ -19,7 +19,7 @@
         <div style="margin:auto;background-color: #840808" class="auto-style14">
         <table class="auto-style10">
             <tr>
-                <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelUsernameLogin" runat="server" Text="Nombre de usuario" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
+                <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelUsernameLogin" runat="server" Text="Correo electrónico" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
                     <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                 </td>

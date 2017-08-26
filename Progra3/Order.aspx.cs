@@ -11,6 +11,7 @@ public partial class _Default : System.Web.UI.Page
     int totalTmp = 0;
     string tableContent = "";
     String orderDetail;
+    String userEmail;
     ArrayList arrayUser = UsersControl.arrayUser;
     /**
      * this method is really simple because it loads all the requiered methods to see all the information on the UI 
@@ -31,6 +32,7 @@ public partial class _Default : System.Web.UI.Page
             if (user.username.Equals(Session["LoggedUser"]))
             {
                 userBalance = user.balance;
+                userEmail = user.username;
             }
         }
     }
@@ -69,7 +71,7 @@ public partial class _Default : System.Web.UI.Page
             orderDetail += "\n" + product.descripcion + "\n" + "por un total de: " + product.precio;
         }
         orderDetail += "\nGracias por preferir Easy Fast Food ";
-        client.Send("salasbar97@gmail.com", "salasbar97@gmail.com", "Comprobante de compra", orderDetail);
+        client.Send("salasbar97@gmail.com", userEmail, "Comprobante de compra", orderDetail);
     }
     /*
      * This method will finish the buy of the user.

@@ -32,7 +32,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelNewUsername" runat="server" Text="Nombre de usuario" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
+                <td class="auto-style11" style="color: #FFFFFF;"><asp:Label  ID="LabelNewUsername" runat="server" Text="Correo electrónico" Font-Names="Kristen ITC" text-align="center" Font-Size="Small"></asp:Label></td>
                 <td>
                     <asp:TextBox ID="newUsername" runat="server"></asp:TextBox>
                 </td>
